@@ -1,6 +1,6 @@
 # LLMs ... on LLMs
 
-## Can you ask LLMs to explain how they work!?
+##" If they can create pizza recipes and write emails, they can explain how they're made, right?"
 
 ![alt text](images/header.webp)
 
@@ -8,11 +8,13 @@
 
  LLMs excel in research, gathering sources, and summarising complex topics.
 
- So wait ....
+This made me wonder (maybe you had the same thought!):
 
 *Can you ask LLMs to explain how they work!?*
 
-This thought, and question, form the basis for the information in this repository. 
+I'm been keeping a record of my prompts and outputs since the summer (archive: [DanielGoesPrompting.com(https://danielgoesprompting.com)]). This repository will gather those notes which are related to the fascinating theory underlying LLMs as well as the evolution in LLM capabilities and the market (the latter two will become outdated very quickly!)
+
+## ⚠️ Content Accuracy Disclaimer! ⚠️
 
 As ever when reading information derived from LLMs, treat it with some degree of skepticism. 
 
@@ -22,7 +24,11 @@ Where possible the outputs have been marked with the:
 - The platform the inferences were generated on
 - The date
 
+---
+
 ## Author
+
+LLMs, as prompted by:
 
 Daniel Rosehill  
 (public at danielrosehill dot com)
