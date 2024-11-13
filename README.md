@@ -1,6 +1,6 @@
 # LLMs ... on LLMs
 
-##" If they can create pizza recipes and write emails, they can explain how they're made, right?"
+## If they can create pizza recipes and write emails, they can explain how they're made, right?"
 
 ![alt text](images/header.webp)
 
