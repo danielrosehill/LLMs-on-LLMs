@@ -16,21 +16,27 @@ I've been keeping a record of my prompts and outputs since the summer - the slow
 
 I'll use this repository to gather and share those related to LLMs themselves.
 
+---
+
 ### Just some random things I've wondered...
 
 Some of my prompts are things that piqued my curiosity:
 
   *LLMs generate text ... so why are they so demanding on GPUs specifically?!*  
-  *If you wanted to host a local LLM that could match the power of GPT-4o how much would it cost ... and how annoyed would your neighbors be about the noise?* (spoiler alert: much money; noise probably bearable)
+
+  *If you wanted to host a local LLM that could match the power of GPT-4o how much would it cost ... and how annoyed would your neighbors be about the noise? Also: what would your electricity bills be like?!* (Spoiler alert: much money; noise probably bearable)
+
+  ---
 
 ### And lots of "ELI5" type content
 
 *Explain how weights and balances work in LLMs*  
+
 *How does tokenisation work and why does it differ by LLM?*
 
 Etc
 
-
+---
 
 ## ⚠️ Content Accuracy Disclaimer! ⚠️
 
