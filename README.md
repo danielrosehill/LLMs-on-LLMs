@@ -18,6 +18,14 @@ I'll use this repository to gather and share those related to LLMs themselves.
 
 ---
 
+### Outputs Index
+
+Outputs are gathered in `outputs` (`prompts` records the prompts I used to generate them).
+
+The `index.md` is intended to provide an index. Once I figure out how to generate it programatically it will be complete. Until then, it will lag behind the files.
+
+- [Index](https://github.com/danielrosehill/LLMs-on-LLMs/blob/main/outputs/index.md)
+
 ### Just some random things I've wondered...
 
 Some of my prompts are things that piqued my curiosity:
