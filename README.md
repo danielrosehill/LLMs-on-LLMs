@@ -26,6 +26,8 @@ The `index.md` is intended to provide an index. Once I figure out how to generat
 
 - [Index](https://github.com/danielrosehill/LLMs-on-LLMs/blob/main/outputs/index.md)
 
+---
+
 ### Just some random things I've wondered...
 
 Some of my prompts are things that piqued my curiosity:
