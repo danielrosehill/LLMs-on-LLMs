@@ -1,0 +1,8591 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../unsorted/using-llamaindex-for-building-chatbot-with-postgres-data-saving-edbe/">
+      
+      
+        <link rel="next" href="../can-llms-be-used-to-mine-use-cases-for-themselves_-bdf/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>Prompt - LLMs on LLMs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prompt" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="LLMs on LLMs" class="md-header__button md-logo" aria-label="LLMs on LLMs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LLMs on LLMs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Prompt
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="LLMs on LLMs" class="md-nav__button md-logo" aria-label="LLMs on LLMs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    LLMs on LLMs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLMs on LLMs - Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ai careers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Ai careers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-careers/foundational-certifications-for-ai-%26-llm-career-abe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Your Custom Page Title
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-careers/jobs-involving-llms-and-research-eddc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jobs involving llms and research eddc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Llm ops
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Llm ops
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-careers/llm-ops/llm-ops---tools-and-skills-cebae/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm ops   tools and skills cebae
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-careers/llm-ops/llm-ops-tools-functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Apis and programmatic use
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Apis and programmatic use
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apis-and-programmatic-use/apis-with-code-llama-access-dfa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apis with code llama access dfa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apis-and-programmatic-use/claude-api-usage-limits_-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apis-and-programmatic-use/gpt-api-vs-web-ui-quality-ccd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apis-and-programmatic-use/standardisation-in-llm-api-structure_-dea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apis-and-programmatic-use/unified-api-providers---a-list-of-platforms-bcc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apis-and-programmatic-use/web-llm-uis-with-api-support-ca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web llm uis with api support ca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apis-and-programmatic-use/when-you-interact-programatically-with-llms-do-you-also-get-markdown-bfdaee/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    When you interact programatically with llms do you also get markdown bfdaee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apis-and-programmatic-use/why-do-llm-apis-seem-to-perform-far-worse-than-web-uis_-acab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Benchmarking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Benchmarking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarking/benchmarks-between-llms-for-specific-tasks-fbba/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarking/llm-benchmarking-organisations-fc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Big picture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Big picture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../big-picture/how-much-innovation-happens-in-llms-ca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../big-picture/the-llm-pipeline-af/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Censorship
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Censorship
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../censorship/are-censorship-free-llms-actually-possible_-bb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Are censorship free llms actually possible  bb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../censorship/evaluating-censorship-in-llms-ea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluating censorship in llms ea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../censorship/how-to-abliterate-any-llm-fbcc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to abliterate any llm fbcc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Code generation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Code generation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/best-cloud-llms-for-python-programming-cecf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best cloud llms for python programming cecf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/best-fine-tuned-llm-for-python-programming-cc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best fine tuned llm for python programming cc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/code-generation-apis-that-can-debug-and-generate-python-ddfd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/development-frameworks-for-llm-projects-afe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/how-to-use-code-llama-bc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/how-to-use-starcoder-cafbddc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/python-generation-llms---big-run-cc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/python-llms-available-as-apis-deb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/star-coder-access-add/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/studies-of-the-best-llms-for-code-generation-ab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/what-are-some-emerging-programming-llms-fbce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/wizard-coder-vs-gpt-for-python-programming-dda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wizard coder vs gpt for python programming dda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/would-unit-testing-help-ai-assisted-dev-workflows-fb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Context
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Context
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/best-format-for-storing-resume-data-as-context-ca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/building-a-custom-context-library-for-llm-work-dbaea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/creating-a-context-for-professional-purposes-fd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/existing-frameworks-for-context-setting-for-llms-dbedbc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/existing-solutions-that-could-be-repurposed-for-a-contextual-repository-cad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/portable-personal-contexts-for-llms-cbc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/starter-to-do-list-for-contextual-folder-dedd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/storing-structured-contextual-data-bbbdd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/the-context-window-in-llms---explainer-bbbafd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding the Context Window in Large Language Models: A Primer for Business Leaders
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Core concepts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Core concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/attention-mechanisms-in-llms-explained-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding Attention Mechanisms in Large Language Models: A Primer for Business Leaders
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/vector-databases-explained-eed/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vector Databases: A Primer for Business Leaders
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/what-do-top-k-and-top-m-mean-in-llms-fedc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What do top k and top m mean in llms fedc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Inference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_4">
+            <span class="md-nav__icon md-icon"></span>
+            Inference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/inference/llm-supporting-the-longest-outputs-eefb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm supporting the longest outputs eefb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/inference/what-is-llm-inference_-efc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is llm inference  efc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_5" id="__nav_9_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Neural networks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_5">
+            <span class="md-nav__icon md-icon"></span>
+            Neural networks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/neural-networks/what-is-the-_neural-network_-that-underlies-an-llm_-/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is the  neural network  that underlies an llm  
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_6" id="__nav_9_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Weights
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_6">
+            <span class="md-nav__icon md-icon"></span>
+            Weights
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/weights/the-concept-of-weights-in-llms-add/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cost mgmt
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Cost mgmt
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cost-mgmt/cost-effective-api-for-bulk-prompting-bdeefd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cost-mgmt/costing-for-llm-folder-analysis-ffdde/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Custom agents assistants
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Custom agents assistants
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom-agents-assistants/converting-system-prompts-into-hugging-face-chat-agents-dffbd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Eli5
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Eli5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eli5/how-llms-store-info-babb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How llms store info babb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fine Tuning
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Fine Tuning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fine-tuning/howlong/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How long does fine tuning take?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Geography and culture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            Geography and culture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../geography-and-culture/llm-development-in-asia-db/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm development in asia db
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../geography-and-culture/most-llms-have-an-inherently-american-worldview-dbdc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hardware
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Hardware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/hardware-that-is-specialised-for-running-llms-fecb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hardware that is specialised for running llms fecb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Im curious
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Im curious
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/are-llms-always-restricted-to-focusing-on-retrospective-information-bfbdd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/are-there-already-collections-of-llm-outputs-out-there-bb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/are-there-llm-classifications-ffbb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/does-more-parameters-always-mean-better-performance_-bfb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/how-can-some-llms-take-up-so-little-space-ced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/how-do-llms-analyse-images_-feb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/how-do-you-work-with-multiple-custom-gpts-ad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How do you work with multiple custom gpts ad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/how-does-chatgpt-produce-better-software-recs-than-google-edd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How does chatgpt produce better software recs than google edd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/how-does-eleuther-ai-offer-gpts-bc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/how-llms-generate-responses-cd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How llms generate responses cd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/how-llms-learn-colloquialisms-ce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How llms learn colloquialisms ce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/the-forgotten-llms-bef/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/what-do-llm-model-variants-mean-bcfd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/why-are-there-so-many-self-hostable-llms-ecfe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Why are there so many self hostable llms ecfe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/why-do-llms-need-gpu-resources-specifically_-cff/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/why-is-context-such-a-challenge-for-llms-ac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Why is context such a challenge for llms ac
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Image gen
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            Image gen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../image-gen/what-does-inpainting-mean-%28ai-generated-images%29-ed/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What does inpainting mean (ai generated images) ed
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_17_2" id="__nav_17_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dalle
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_17_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17_2">
+            <span class="md-nav__icon md-icon"></span>
+            Dalle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../image-gen/dalle/dalle-standard-res/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dalle standard res
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_18" id="__nav_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Local llms
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18">
+            <span class="md-nav__icon md-icon"></span>
+            Local llms
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llms/can-you-make-a-local-llm-app-that-has-an-interactive-conversation-component-bc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llms/could-you-use-a-local-llm-for-search-data-retrieval-eb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llms/desktop-llm-apps-with-opensuse-support-beacaa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desktop llm apps with opensuse support beacaa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llms/how-do-local-llms-handle-context-management-and-tokenisation_-eec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How do local llms handle context management and tokenisation  eec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llms/how-to-run-an-llm-locally---guis-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llms/some-real-local-llm-use-cases-abc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llms/well-known-llms-run-locally/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Well known llms run locally
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llms/which-llm-apis-can-be-used-on-jan-%28et-al%29-fdfe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Which llm apis can be used on jan (et al) fdfe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_18_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_18_9" id="__nav_18_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lmstudio
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_18_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_18_9">
+            <span class="md-nav__icon md-icon"></span>
+            Lmstudio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llms/lmstudio/inference-parameters-in-lm-studio-explained-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inference parameters in lm studio explained d
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_19" id="__nav_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19">
+            <span class="md-nav__icon md-icon"></span>
+            Models
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_19_1" id="__nav_19_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Google
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_19_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19_1">
+            <span class="md-nav__icon md-icon"></span>
+            Google
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/google/gemma-series-of-llms-bead/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gemma series of llms bead
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_19_2" id="__nav_19_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Grok
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_19_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19_2">
+            <span class="md-nav__icon md-icon"></span>
+            Grok
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/grok/the-grok-llms-acd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The grok llms acd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_19_3" id="__nav_19_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lemistral
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_19_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19_3">
+            <span class="md-nav__icon md-icon"></span>
+            Lemistral
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/lemistral/le-mistral-current-models-explained-/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Le mistral current models explained 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_19_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_19_4" id="__nav_19_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Model comparisons
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_19_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_19_4">
+            <span class="md-nav__icon md-icon"></span>
+            Model comparisons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/model-comparisons/comparing-gpt-o-with-o-mini-dcea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comparing gpt o with o mini dcea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/model-comparisons/gpt-o-vs.-o-turbo-caf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gpt o vs. o turbo caf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/model-comparisons/mistral-large--vs.-gpt--and-claude-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mistral large  vs. gpt  and claude d
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_20" id="__nav_20_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Multimodal llms
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_20">
+            <span class="md-nav__icon md-icon"></span>
+            Multimodal llms
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multimodal-llms/list-of-file-types-supported-by-gpto-ec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List of file types supported by gpto ec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_21" id="__nav_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Non personal use
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21">
+            <span class="md-nav__icon md-icon"></span>
+            Non personal use
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_1" id="__nav_21_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Enterprise llm use
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_1">
+            <span class="md-nav__icon md-icon"></span>
+            Enterprise llm use
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../non-personal-use/enterprise-llm-use/are-there-llms-that-are-more-favored-among-enterprise-users_-bfa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../non-personal-use/enterprise-llm-use/how-are-businesses-using-llms---or-beginning-to-ddb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../non-personal-use/enterprise-llm-use/llm-intended-for-business-use-ffc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../non-personal-use/enterprise-llm-use/llm-usage-among-businesses---stats-ea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../non-personal-use/enterprise-llm-use/llm-use-among-businesses-eafede/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_21_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_21_2" id="__nav_21_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Government llm adoption
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_21_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_21_2">
+            <span class="md-nav__icon md-icon"></span>
+            Government llm adoption
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../non-personal-use/government-llm-adoption/government-use-of-llms-aacff/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_22" id="__nav_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Platforms and companies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_22">
+            <span class="md-nav__icon md-icon"></span>
+            Platforms and companies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platforms-and-companies/what-is-alabs_-fa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is alabs  fa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_22_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_22_2" id="__nav_22_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Chatgpt
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_22_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_22_2">
+            <span class="md-nav__icon md-icon"></span>
+            Chatgpt
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platforms-and-companies/chatgpt/chatgpt---web-ui-vs-api-cost-estimate-cba/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platforms-and-companies/chatgpt/chatgpt-data-exploration-prompt-ideas-bdd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chatgpt data exploration prompt ideas bdd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platforms-and-companies/chatgpt/chatgpt-enabling-learning-ea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chatgpt enabling learning ea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platforms-and-companies/chatgpt/chatgpt-use-case-ui-idea---exploring-cfe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platforms-and-companies/chatgpt/chatgpt-voice-apps-for-android-acff/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chatgpt voice apps for android acff
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platforms-and-companies/chatgpt/how-chatgpt-continuous-improvement-works-cd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How chatgpt continuous improvement works cd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_23" id="__nav_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prompt eng
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_23">
+            <span class="md-nav__icon md-icon"></span>
+            Prompt eng
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/frameworks-for-prompt-engineering-cd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/techniques/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt engineering techniques, alphabetical list
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/the-future-of-prompt-engineering---an-outlook-ede/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/tools-like-prompt-source-fef/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_23_5" id="__nav_23_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Evaluation prompts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_23_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_23_5">
+            <span class="md-nav__icon md-icon"></span>
+            Evaluation prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/evaluation-prompts/library-of-prompts-for-testing-llms-abee/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_23_6" id="__nav_23_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prompt eng careers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_23_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_23_6">
+            <span class="md-nav__icon md-icon"></span>
+            Prompt eng careers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/prompt-eng-careers/prompt-engineering-certifications-fee/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/prompt-eng-careers/prompt-engineering-explained-adfbd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt engineering explained adfbd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_23_7" id="__nav_23_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prompt eng tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_23_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_23_7">
+            <span class="md-nav__icon md-icon"></span>
+            Prompt eng tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/prompt-eng-tools/prompt-evaluation-tools-that-can-be-deployed-locally-be/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt evaluation tools that can be deployed locally be
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_23_8" id="__nav_23_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Specific strategies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_23_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_23_8">
+            <span class="md-nav__icon md-icon"></span>
+            Specific strategies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_23_8_1" id="__nav_23_8_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Chain of thought
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_23_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_23_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Chain of thought
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/specific-strategies/chain-of-thought/chain-of-thought-prompting-ddb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chain of thought prompting ddb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_23_8_2" id="__nav_23_8_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Chunking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_23_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_23_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Chunking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/specific-strategies/chunking/how-to-use-chunking-with-a-prompt-adbebf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_23_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_23_8_3" id="__nav_23_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Zero shot
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_23_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_23_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Zero shot
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/specific-strategies/zero-shot/zero-shot-prompting-explained-cfefd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zero shot prompting explained cfefd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_24" id="__nav_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prompting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_24">
+            <span class="md-nav__icon md-icon"></span>
+            Prompting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/how-should-i-format-saved-prompts-efcb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/how-to-use-long-prompts-in-llm-scripts-cbfb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/how-to-write-prompts-inside-of-scripts-with-openai-api-af/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to write prompts inside of scripts with openai api af
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/prompt-development-interview-dcbd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/prompt-management-tools-worth-checking-out-ecee/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt management tools worth checking out ecee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/prompt-reframing-explained-cde/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt reframing explained cde
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/prompt-templates-for-generating-images-from-context-setting-image-acdaabb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt templates for generating images from context setting image acdaabb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/prompt-templates-for-generating-tech-specs-for-resting-projects-ffaf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt templates for generating tech specs for resting projects ffaf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/prompting-approaches-for-document-formatting-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompting approaches for document formatting c
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/prompting-for-specific-aspect-ratios-acdde/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompting for specific aspect ratios acdde
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/prompting-sprint-guidance-document-bacf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/prompting-tips-for-working-with-large-inputs-past-the-token-limit-dcdac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/which-languages-does-prompting-happen-in-adaa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_25" >
+        
+          
+          <label class="md-nav__link" for="__nav_25" id="__nav_25_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prompts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_25_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_25">
+            <span class="md-nav__icon md-icon"></span>
+            Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_25_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_25_1" id="__nav_25_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prompt eng
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_25_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_25_1">
+            <span class="md-nav__icon md-icon"></span>
+            Prompt eng
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/prompt-eng/prompt-eng-in-codeblock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompts/prompt-eng/prompt-eng-techs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_26" >
+        
+          
+          <label class="md-nav__link" for="__nav_26" id="__nav_26_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_26_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_26">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/conda-packages-for-llm-work-adce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conda packages for llm work adce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/conda-packages-for-nlp-afd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conda packages for nlp afd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/conda-packages-for-prompt-engineering-ba/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conda packages for prompt engineering ba
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/conda-packages-related-to-data-anlaytics-cc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conda packages related to data anlaytics cc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/conda-packges-for-ai-%28general%29-fde/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conda packges for ai (general) fde
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_27" >
+        
+          
+          <label class="md-nav__link" for="__nav_27" id="__nav_27_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rag
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_27_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_27">
+            <span class="md-nav__icon md-icon"></span>
+            Rag
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rag/major-rags-and-open-source-rags-acfd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rag/test-llm-%2B-rag-deployments-in-the-cloud-%28saas%29-ac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test llm + rag deployments in the cloud (saas) ac
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rag/the-emergence-of-rag-daaca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rag/why-might-i-want-to-set-up-my-own-rag-system_-bf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Why might i want to set up my own rag system  bf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_28" >
+        
+          
+          <label class="md-nav__link" for="__nav_28" id="__nav_28_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Self hosting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_28_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_28">
+            <span class="md-nav__icon md-icon"></span>
+            Self hosting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../self-hosting/big-agi-vs.-librechat-cfdfa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_29" >
+        
+          
+          <label class="md-nav__link" for="__nav_29" id="__nav_29_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Storage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_29_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_29">
+            <span class="md-nav__icon md-icon"></span>
+            Storage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage/how-can-i-improve-on-my-current-system-for-storing-outputs-de/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage/how-can-i-improve-this-structure-for-storing-gpt-outputs-in-obsidian-bdbb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage/store-outputs-and-prompts-automatically.-how-to-do-this-caaf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Store outputs and prompts automatically. how to do this caaf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage/ways-prompts-and-outputs-could-be-stored-da/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ways prompts and outputs could be stored da
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_29_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_29_5" id="__nav_29_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Output storage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_29_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_29_5">
+            <span class="md-nav__icon md-icon"></span>
+            Output storage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage/output-storage/claude-on-benefits-of-storing-outputs-in-a-km-ee/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Claude on benefits of storing outputs in a km ee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage/output-storage/claude-on-why-storing-llm-outputs-is-not-_stupid_-fcee/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage/output-storage/exploring-vector-databases-for-storing-markdown-repository-db/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage/output-storage/finding-a-better-way-to-capture-llm-outputs-cbf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage/output-storage/gpts-recommendations-for-saving-chats-ae/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gpts recommendations for saving chats ae
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_29_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_29_6" id="__nav_29_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prompt storage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_29_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_29_6">
+            <span class="md-nav__icon md-icon"></span>
+            Prompt storage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage/prompt-storage/saving-prompts-in-markdown-abb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_29_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_29_7" id="__nav_29_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Vector dbs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_29_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_29_7">
+            <span class="md-nav__icon md-icon"></span>
+            Vector dbs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage/vector-dbs/vector-db-for-output-storage-dd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vector db for output storage dd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_30" >
+        
+          
+          <label class="md-nav__link" for="__nav_30" id="__nav_30_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Testing and evaluation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_30_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_30">
+            <span class="md-nav__icon md-icon"></span>
+            Testing and evaluation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../testing-and-evaluation/best-practices-for-testing-gpts-%26-gpt-outputs-ccdad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best practices for testing gpts & gpt outputs ccdad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../testing-and-evaluation/existing-frameworks-for-llm-evaluation-based-on-prompts-/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_31" >
+        
+          
+          <label class="md-nav__link" for="__nav_31" id="__nav_31_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    The industry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_31_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_31">
+            <span class="md-nav__icon md-icon"></span>
+            The industry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../the-industry/how-much-have-major-llm-providers-open-sourced-their-models_-ccfd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How much have major llm providers open sourced their models  ccfd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../the-industry/major-llm-conferences-bcbb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../the-industry/major-llm-developments-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_32" >
+        
+          
+          <label class="md-nav__link" for="__nav_32" id="__nav_32_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tokenisation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_32_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_32">
+            <span class="md-nav__icon md-icon"></span>
+            Tokenisation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tokenisation/can-you-estimate-tokenisation-limits-when-working-with-long-documents-cbd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tokenisation/cloud-tools-for-calculating-tokenisation-usage-from-text-ddaa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tokenisation/how-do-you-calculate-tokensation-ffd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How do you calculate tokensation ffd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tokenisation/llm-with-the-highest-token-limit-dac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm with the highest token limit dac
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tokenisation/tokenisation-in-llms---business-primer-aedf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_33" >
+        
+          
+          <label class="md-nav__link" for="__nav_33" id="__nav_33_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_33_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_33">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_33_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_33_1" id="__nav_33_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lang chain
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_33_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_33_1">
+            <span class="md-nav__icon md-icon"></span>
+            Lang chain
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/lang-chain/lang-chain-features-for-context-setting-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/lang-chain/lang-chain-versus-llama-index-dbba/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_34" >
+        
+          
+          <label class="md-nav__link" for="__nav_34" id="__nav_34_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Training
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_34_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_34">
+            <span class="md-nav__icon md-icon"></span>
+            Training
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/the-mysteries-of-llm-training-data-dfe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/what%27s-currently-being-used-as-training-data_-dabe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's currently being used as training data  dabe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/what-would-you-get-in-the-pile-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_35" >
+        
+          
+          <label class="md-nav__link" for="__nav_35" id="__nav_35_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Uis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_35_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_35">
+            <span class="md-nav__icon md-icon"></span>
+            Uis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uis/image-generation-guis-for-ai-programs-ebfea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Image generation guis for ai programs ebfea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_36" >
+        
+          
+          <label class="md-nav__link" for="__nav_36" id="__nav_36_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unsorted
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_36_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_36">
+            <span class="md-nav__icon md-icon"></span>
+            Unsorted
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/ai-animation-tools-ac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ai animation tools ac
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/alternatives-to-lm-studio-for-running-local-llms-af/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alternatives to lm studio for running local llms af
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/are-llms-a-type-of-ml-bdaa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/are-there-ai-tools-which-could-automatically-construct-a-graph-representation-of-textual-data-ead/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Are there ai tools which could automatically construct a graph representation of textual data ead
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/can-you-leverage-the-ability-to-use-llms-in-a-chat-interface-while-building-your-own-chat-frontend-cfd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/claude-and-chatgpt-web-ui-usage-limits-cec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/cloud-llms-for-parsing--page-pdfs-ea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/could-lang-chain-be-backed-by-a-graph-database-for-storage-aa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Could lang chain be backed by a graph database for storage aa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/creating-a-personal-llm-derivative-eecc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/custom-uis-for-llms-dbe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/deploying-custom-llm-agents-edca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying custom llm agents edca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/do-llms-only-improve-with-new-model-releases_-cebb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Do llms only improve with new model releases  cebb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/do-local-code-gen-llms-do-better-than-cloud-ai_-ed/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Do local code gen llms do better than cloud ai  ed
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/doing-topic-cluster-analysis-on-gpt-vault-abf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/existing-solutions-for-prompt-and-output-management-ffdb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/exploring-the-idea-of-an-ar-world-built-on-top-of-a-graph-database-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/extract-prompts-using-a-script---obsidian-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/free-llms-for-open-source-ba/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/frontends-for-the-conversational-llm-experience-badeb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/gaining-a-deeper-understanding-of-llms-da/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/general-purpose-llm-agent-exploration-eac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/gpt-api-%28output%29-rate-limit-by-word-count-%28estimate%29-cdfdd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/gpt-o-with-web-browsing---programmatic-use-edbc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/gpt-recommendations-for-developing-an-effective-prompt-library-bfeb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gpt recommendations for developing an effective prompt library bfeb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/gpt-to-regular-llm-agent-config-dfcc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/how-ai-and-ml-have-relevance-in-the-world-of-sustainability-reporting_-dbbebb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How ai and ml have relevance in the world of sustainability reporting  dbbebb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/how-can-gpt-generate-outputs-from-inputs-with-long-documents-in-context-bcde/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/how-long-might-programatically-parsing-%2C-notes-into-a-graph-database-take-dc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How long might programatically parsing , notes into a graph database take dc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/how-to-launch-obsidian-and-chatgpt-in-split-screen-ffeb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/how-to-run-voyant-tools-locally-cda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to run voyant tools locally cda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/how-to-set-up-a-testing-local-llm-%2B-rag-setup-/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to set up a testing local llm + rag setup 
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/how-to-use-modular-components-to-build-an-llm-interaction-app-bdaffc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/increased-personalisation-in-future-llms-aa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Increased personalisation in future llms aa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/inference-quality-differences-between-variants-of-an-llm-dca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inference quality differences between variants of an llm dca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/intended-way-to-setup-prompt-foo-locally-dcd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intended way to setup prompt foo locally dcd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/interfaces-delivering-conversational-ai-in-a-better-way_-ca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/interfaces-for-accessing-multiple-llms-bcd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/intermediate-solutions-for-scaled-up-ai-usage-caffd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/leveraging-screen-scraping-for-llm-output-capture-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/llm-api-marketplace-db/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/llm-capabilities---an-overview-eafe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/llm-improvements-in--/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LLM improvements in 2025
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/llm-interaction-classification-fbbccda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/llm-models_-networks-to-explore-beyond-hugging-face-fcfe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm models  networks to explore beyond hugging face fcfe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/llm-number-approximations-afecfa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/llms-and-ai-tools-for-basic-data-viz-applications-eb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llms and ai tools for basic data viz applications eb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/llms-and-data-visualisation-ebb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/llms-with-real-time-capabilities-cdb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/llms-with-voice-mode-support-on-non-mobile-devices-dbe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llms with voice mode support on non mobile devices dbe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/local-llms-on-laptop---suggestions-fa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Local llms on laptop   suggestions fa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/local-llms-that-could-offer-value-beyond-cloud-ai-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Local llms that could offer value beyond cloud ai b
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/local-llms-with-recent-training-data-cutoff-ddd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Local llms with recent training data cutoff ddd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/looking-for-more-multi-llm-access-tools-for-power-users-dcec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/most-intensive-llm-users-fb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/most-scalable-llms-for-intensive-exploratory-work-aec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/new-companies-in-the-ai-%26-llm-space-/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/one-shop-prompting-dabe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    One shop prompting dabe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/online-llms-with-long-output-support-fe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/online-promptathons-da/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/openrouter-versus-provider-llms-fea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Openrouter versus provider llms fea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/other-technical-llm-concepts-aaea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/proprietary-llms-that-have-been-developed-ebb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/provisioning-a-self-hosted-llm-on-the-cloud-fe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/rank-the-major-llms-by-training-data-cutoff-time-ad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rank the major llms by training data cutoff time ad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/self-hostable-llm-frontends-with-managed-storage-capability-da/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/simplified-template-for-ai-assisted-dev-projects-bcedf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/some-more-llm-assistants-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/summary-of-llm-api-marketplaces-fae/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/test-prompts-for-evaluating-llm-cencorship-ee/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test prompts for evaluating llm cencorship ee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/the-biggest-listing-of-llms-on-the-internet-abb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/the-capabilities-of-gpt-ca/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The capabilities of gpt ca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/tools-that-allow-storage-of-gpt-interactions-in-object-storage-aaec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/truly-easy-guis-for-vector-dbs-eef/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/truncating-news-before-sending-to-gpt-due-to-token-limitation-aeec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/using-chatgpt-and-llms-at-scale-and-with-better-indexing-deecd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unsorted/using-llamaindex-for-building-chatbot-with-postgres-data-saving-edbe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using llamaindex for building chatbot with postgres data saving edbe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_37" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_37" id="__nav_37_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Use cases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_37_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_37">
+            <span class="md-nav__icon md-icon"></span>
+            Use cases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../can-llms-be-used-to-mine-use-cases-for-themselves_-bdf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Can llms be used to mine use cases for themselves  bdf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../can-you-use-llms-to-explain-code-in-natural-language_-aabd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../generative-ai-use-cases-beyond-llms-and-image_-cde/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generative ai use cases beyond llms and image  cde
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_37_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_37_5" id="__nav_37_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Career
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_37_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_37_5">
+            <span class="md-nav__icon md-icon"></span>
+            Career
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../career/llms-for-proactive-knowledge-gap-closing-afea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llms for proactive knowledge gap closing afea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_37_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_37_6" id="__nav_37_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Classification
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_37_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_37_6">
+            <span class="md-nav__icon md-icon"></span>
+            Classification
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classification/how-to-get-an-llm-to-classify-markdown-files-aa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_37_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_37_7" id="__nav_37_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data analysis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_37_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_37_7">
+            <span class="md-nav__icon md-icon"></span>
+            Data analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-analysis/data-analytics-capabilities-of-llms-dccce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_37_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_37_8" id="__nav_37_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data vis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_37_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_37_8">
+            <span class="md-nav__icon md-icon"></span>
+            Data vis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-vis/local-llms-for-data-visualisation-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Local llms for data visualisation c
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_37_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_37_9" id="__nav_37_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Geopolitics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_37_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_37_9">
+            <span class="md-nav__icon md-icon"></span>
+            Geopolitics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geopolitics/using-llms-for-geopolitical-scenario-modelling-/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_37_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_37_10" id="__nav_37_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Personalised learning
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_37_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_37_10">
+            <span class="md-nav__icon md-icon"></span>
+            Personalised learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../personalised-learning/how-could-i-set-up-a-customised-llm-_teacher__-add/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../personalised-learning/llms-ability-to-deliver-personalised-learning-experiences-eab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llms ability to deliver personalised learning experiences eab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../personalised-learning/llms-for-prompt-engineering-tuition-caa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_38" >
+        
+          
+          <label class="md-nav__link" for="__nav_38" id="__nav_38_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Voice control
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_38_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_38">
+            <span class="md-nav__icon md-icon"></span>
+            Voice control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voice-control/llms-with-deep-support-for-voice-cd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voice-control/voice-recognition-for-interfacing-with-llms-via-chrome-be/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Voice recognition for interfacing with llms via chrome be
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="prompt">Prompt</h1>
+<p>I feel like the best way to execute on this use case has to be something like an LLM that is trained on this keyword array but which is intelligent enough to think a bit beyond it. Can you think of any LLM that could be used for this purpose? Are there any taht have been developed with live news monitoring in mind?</p>
+<h1 id="output">Output</h1>
+<p>For a more intelligent system capable of interpreting security events beyond keyword matching, a <strong>Large Language Model (LLM)</strong> is indeed a suitable choice. While LLMs are primarily used for natural language processing (NLP), they can be adapted to the task of <strong>news monitoring</strong> with contextual understanding beyond keyword arrays. Let’s break down the options available and how you could use LLMs for this use case.</p>
+<h3 id="1-hugging-face-llms">1. Hugging Face LLMs:</h3>
+<p>Hugging Face is one of the best platforms for exploring and deploying LLMs trained for specific tasks, and there are several models that can be adapted for live news monitoring:</p>
+<ul>
+<li><strong>DistilBERT</strong> and <strong>RoBERTa</strong>: These models are excellent for text classification and entity recognition. You could fine-tune these models on a dataset of news articles labeled by severity (i.e., severe, moderate, low) based on your keyword array. With transfer learning, the model could be trained to understand security-related contexts in Israel and Jerusalem.</li>
+<li><strong>LLMs with text similarity capabilities</strong>: Models like <strong>Sentence-BERT</strong> or <strong>OpenAI’s GPT models</strong> can help you measure the similarity between incoming news articles and your keyword array. This will allow the model to "think beyond" exact keyword matching by understanding the semantic meaning behind news events, even when keywords are slightly different.</li>
+</ul>
+<p>Hugging Face hosts multiple models pre-trained for various NLP tasks that you can fine-tune or use directly for news classification and monitoring.</p>
+<h3 id="2-openai-gpt-4">2. OpenAI GPT-4:</h3>
+<ul>
+<li><strong>GPT-4 (or GPT-4 Turbo)</strong> can be fine-tuned or used with few-shot learning for contextual news monitoring. While OpenAI models aren’t live-trainable in real time, you can build a system where the LLM regularly queries incoming news data, processes it, and classifies the news based on how closely it relates to your security keywords.</li>
+<li><strong>Customization with prompt engineering</strong>: GPT-4’s prompt engineering capabilities can make it intelligent enough to recognize and classify unseen but similar events. You can create a structured prompt that guides the model to recognize threats even when not explicitly listed in your keyword array.</li>
+<li><strong>Use-case specific example</strong>:
+  <code>"You are a security monitoring assistant tasked with identifying security events in Jerusalem and Israel. 
+  Prioritize terrorist attacks, rocket sirens, bombings, shootings, and civil unrest. 
+  If a news article contains an event that matches or is related to the following keywords, classify it as 'Most Severe' or 'Very Severe': [list of keywords]. 
+  Use your judgment to assess how closely related news is to the terms provided."</code></li>
+</ul>
+<h3 id="3-real-time-news-monitoring-solutions">3. Real-Time News Monitoring Solutions:</h3>
+<p>Some LLMs and AI systems have been explicitly designed for monitoring live events, including news monitoring, though not always specific to security or Israel. However, these platforms can be adapted for your use case:</p>
+<ul>
+<li><strong>GDELT (Global Data on Events, Location, and Tone)</strong>:
+  GDELT is a real-time system designed to monitor global news and is one of the most comprehensive open-source platforms for analyzing news events. While not an LLM, it can work in conjunction with LLMs to give you structured data (like news reports and metadata) that you can then process through your trained LLM for threat detection.</li>
+<li><strong>AWS Comprehend</strong>:
+  AWS Comprehend provides NLP models that are designed for text analysis. You can fine-tune it for specific needs, such as understanding the severity of security events, by training it on a dataset labeled by your severity levels. AWS Comprehend can help classify and extract key phrases and entities from real-time news streams.</li>
+</ul>
+<h3 id="4-training-custom-llm-with-domain-specific-data">4. Training Custom LLM with Domain-Specific Data:</h3>
+<p>If you're willing to go a step further, you can create a <strong>custom-trained LLM</strong> focused on security events in Israel. By combining data from sources like the <strong>GDELT Project</strong>, <strong>Israel-specific news datasets</strong>, and <strong>historical security data</strong>, you can fine-tune an open-source LLM like <strong>BERT</strong>, <strong>T5</strong>, or <strong>GPT-2</strong> to predict and classify security events.</p>
+<p>Here’s the process:</p>
+<ol>
+<li><strong>Data Collection</strong>: Gather news articles, blogs, and social media posts related to security events in Israel, categorized into severity levels.</li>
+<li><strong>Fine-Tuning</strong>: Use this dataset to fine-tune a model from Hugging Face (e.g., BERT, GPT-2) to classify and understand the security context.</li>
+<li><strong>Integration with Live News Feeds</strong>: Connect this model to live data streams (e.g., from a news API or GDELT) for real-time monitoring.</li>
+</ol>
+<h3 id="5-llms-developed-for-real-time-text-understanding">5. LLMs Developed for Real-Time Text Understanding:</h3>
+<p>There are a few examples of LLMs developed with real-time text understanding in mind:</p>
+<ul>
+<li><strong>BloombergGPT</strong>: This LLM is designed for financial news monitoring but can be adapted to analyze and understand security-related news in real-time.</li>
+<li><strong>Reuters NLP API</strong>: Reuters offers real-time text analysis tools that could be coupled with LLMs for context-specific classification.</li>
+</ul>
+<h3 id="6-rasa-or-other-open-source-nlp-frameworks">6. Rasa or Other Open-Source NLP Frameworks:</h3>
+<ul>
+<li><strong>Rasa</strong> is an open-source framework that you can train for text classification and NLP tasks, including extracting intent from news headlines. By training Rasa with your dataset, you can use it as a lightweight LLM to classify security news events in real time.</li>
+</ul>
+<h3 id="suggested-workflow">Suggested Workflow:</h3>
+<ol>
+<li><strong>Collect News</strong>: Use a news API or GDELT for Israel-specific news.</li>
+<li><strong>Preprocess with Keyword Array</strong>: Run an initial filter using your keyword array for faster classification.</li>
+<li><strong>LLM Processing</strong>: Feed filtered news into an LLM like GPT-4, which will analyze the event's severity and context beyond the keywords.</li>
+<li><strong>Alert Trigger</strong>: If the LLM classifies the event as a high-priority security event (based on semantic understanding), trigger the appropriate alert.</li>
+<li><strong>Feedback Loop</strong>: As new events are detected, continue to retrain or fine-tune the model to improve accuracy over time.</li>
+</ol>
+<h3 id="conclusion">Conclusion:</h3>
+<p>For real-time security news monitoring, a combination of <strong>fine-tuned LLMs</strong> (like <strong>Hugging Face’s BERT</strong> or <strong>GPT-4</strong>) with <strong>real-time data feeds</strong> (e.g., from <strong>GDELT</strong> or <strong>Google News API</strong>) would give you the best of both worlds. You get real-time updates, an intelligent system that understands the nuances of security events, and the ability to "think beyond" simple keyword matching by leveraging semantic understanding.</p>
+<hr />
+<p>The above text was generated by a large language model (LLM) and its accuracy has not been validated. This page is part of 'LLMs-on-LLMs,' a Github repository by Daniel Rosehill which explores how curious humans can use LLMs to better their understanding of LLMs and AI. However, the information should not be regarded as authoritative and given the fast pace of evolution in LLM technology will eventually become deprecated. </p>
+<h2 id="this-footer-was-added-at-15-11-2024">This footer was added at 15-11-2024.</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
