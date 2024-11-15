@@ -1,0 +1,8926 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../self-hosting/big-agi-vs.-librechat-cfdfa">
+      
+      
+        <link rel="next" href="../how-can-i-improve-this-structure-for-storing-gpt-outputs-in-obsidian-bdbb">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>How Can I Improve On My Current System For Storing Outputs De - LLMs on LLMs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prompt" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="LLMs on LLMs" class="md-header__button md-logo" aria-label="LLMs on LLMs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LLMs on LLMs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How Can I Improve On My Current System For Storing Outputs De
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="LLMs on LLMs" class="md-nav__button md-logo" aria-label="LLMs on LLMs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    LLMs on LLMs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    By Topic
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            By Topic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ai Careers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Ai Careers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-careers/foundational-certifications-for-ai-%26-llm-career-abe" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Foundational Certifications For Ai & Llm Career Abe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-careers/jobs-involving-llms-and-research-eddc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jobs Involving Llms And Research Eddc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_3" id="__nav_1_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Llm Ops
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Llm Ops
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-careers/llm-ops/llm-ops---tools-and-skills-cebae" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm Ops Tools And Skills Cebae
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-careers/llm-ops/llm-ops-tools-functions" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm Ops Tools Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Apis And Programmatic Use
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Apis And Programmatic Use
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apis-and-programmatic-use/apis-with-code-llama-access-dfa" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apis With Code Llama Access Dfa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apis-and-programmatic-use/claude-api-usage-limits_-f" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Claude Api Usage Limits F
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apis-and-programmatic-use/gpt-api-vs-web-ui-quality-ccd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gpt Api Vs Web Ui Quality Ccd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apis-and-programmatic-use/standardisation-in-llm-api-structure_-dea" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Standardisation In Llm Api Structure Dea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apis-and-programmatic-use/unified-api-providers---a-list-of-platforms-bcc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unified Api Providers A List Of Platforms Bcc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apis-and-programmatic-use/web-llm-uis-with-api-support-ca" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web Llm Uis With Api Support Ca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apis-and-programmatic-use/when-you-interact-programatically-with-llms-do-you-also-get-markdown-bfdaee" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    When You Interact Programatically With Llms Do You Also Get Markdown Bfdaee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apis-and-programmatic-use/why-do-llm-apis-seem-to-perform-far-worse-than-web-uis_-acab" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Why Do Llm Apis Seem To Perform Far Worse Than Web Uis Acab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Benchmarking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Benchmarking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarking/benchmarks-between-llms-for-specific-tasks-fbba" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Benchmarks Between Llms For Specific Tasks Fbba
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarking/llm-benchmarking-organisations-fc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm Benchmarking Organisations Fc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Big Picture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Big Picture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../big-picture/how-much-innovation-happens-in-llms-ca" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Much Innovation Happens In Llms Ca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../big-picture/the-llm-pipeline-af" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Llm Pipeline Af
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Censorship
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Censorship
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../censorship/are-censorship-free-llms-actually-possible_-bb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Are Censorship Free Llms Actually Possible Bb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../censorship/evaluating-censorship-in-llms-ea" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluating Censorship In Llms Ea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../censorship/how-to-abliterate-any-llm-fbcc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How To Abliterate Any Llm Fbcc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Code Generation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Code Generation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/best-cloud-llms-for-python-programming-cecf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Cloud Llms For Python Programming Cecf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/best-fine-tuned-llm-for-python-programming-cc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Fine Tuned Llm For Python Programming Cc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/code-generation-apis-that-can-debug-and-generate-python-ddfd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code Generation Apis That Can Debug And Generate Python Ddfd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/development-frameworks-for-llm-projects-afe" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development Frameworks For Llm Projects Afe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/how-to-use-code-llama-bc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How To Use Code Llama Bc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/how-to-use-starcoder-cafbddc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How To Use Starcoder Cafbddc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/python-generation-llms---big-run-cc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Generation Llms Big Run Cc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/python-llms-available-as-apis-deb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Llms Available As Apis Deb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/star-coder-access-add" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Star Coder Access Add
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/studies-of-the-best-llms-for-code-generation-ab" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Studies Of The Best Llms For Code Generation Ab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/what-are-some-emerging-programming-llms-fbce" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What Are Some Emerging Programming Llms Fbce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/wizard-coder-vs-gpt-for-python-programming-dda" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wizard Coder Vs Gpt For Python Programming Dda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../code-generation/would-unit-testing-help-ai-assisted-dev-workflows-fb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Would Unit Testing Help Ai Assisted Dev Workflows Fb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Context
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Context
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/best-format-for-storing-resume-data-as-context-ca" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Format For Storing Resume Data As Context Ca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/building-a-custom-context-library-for-llm-work-dbaea" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building A Custom Context Library For Llm Work Dbaea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/creating-a-context-for-professional-purposes-fd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating A Context For Professional Purposes Fd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/existing-frameworks-for-context-setting-for-llms-dbedbc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Existing Frameworks For Context Setting For Llms Dbedbc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/existing-solutions-that-could-be-repurposed-for-a-contextual-repository-cad" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Existing Solutions That Could Be Repurposed For A Contextual Repository Cad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/portable-personal-contexts-for-llms-cbc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Portable Personal Contexts For Llms Cbc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/starter-to-do-list-for-contextual-folder-dedd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Starter To Do List For Contextual Folder Dedd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/storing-structured-contextual-data-bbbdd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Storing Structured Contextual Data Bbbdd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../context/the-context-window-in-llms---explainer-bbbafd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Context Window In Llms Explainer Bbbafd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8" id="__nav_1_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Core Concepts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            Core Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/attention-mechanisms-in-llms-explained-a" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Attention Mechanisms In Llms Explained A
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8_2" id="__nav_1_8_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Inference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Inference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/inference/llm-supporting-the-longest-outputs-eefb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm Supporting The Longest Outputs Eefb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/inference/what-is-llm-inference_-efc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What Is Llm Inference Efc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8_3" id="__nav_1_8_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Neural Networks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Neural Networks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/neural-networks/what-is-the-_neural-network_-that-underlies-an-llm_-" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What Is The Neural Network That Underlies An Llm
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/vector-databases-explained-eed" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vector Databases Explained Eed
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_8_5" id="__nav_1_8_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Weights
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            Weights
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/weights/the-concept-of-weights-in-llms-add" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Concept Of Weights In Llms Add
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core-concepts/what-do-top-k-and-top-m-mean-in-llms-fedc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What Do Top K And Top M Mean In Llms Fedc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cost Mgmt
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            Cost Mgmt
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cost-mgmt/cost-effective-api-for-bulk-prompting-bdeefd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost Effective Api For Bulk Prompting Bdeefd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cost-mgmt/costing-for-llm-folder-analysis-ffdde" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Costing For Llm Folder Analysis Ffdde
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_10" id="__nav_1_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Custom Agents Assistants
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_10">
+            <span class="md-nav__icon md-icon"></span>
+            Custom Agents Assistants
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom-agents-assistants/converting-system-prompts-into-hugging-face-chat-agents-dffbd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Converting System Prompts Into Hugging Face Chat Agents Dffbd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_11" id="__nav_1_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Eli5
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            Eli5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../eli5/how-llms-store-info-babb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Llms Store Info Babb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_12" id="__nav_1_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Fine Tuning
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            Fine Tuning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fine-tuning/how-long-would-fine-tuning-an-llm-take-aa" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Long Would Fine Tuning An Llm Take Aa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fine-tuning/how-much-can-fine-tuned-variants-differ-from-base-models-abf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Much Can Fine Tuned Variants Differ From Base Models Abf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fine-tuning/how-to-deploy-and-fine-tune-an-llm-cea" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How To Deploy And Fine Tune An Llm Cea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fine-tuning/how-would-i-go-about-fine-tuning-an-llm-on-fedora-fdde" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Would I Go About Fine Tuning An Llm On Fedora Fdde
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fine-tuning/llms-fine-tuned-for-geopolitical-scenario-modelling-b" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llms Fine Tuned For Geopolitical Scenario Modelling B
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fine-tuning/llms-finetuned-on-geopolitical-applications-beb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llms Finetuned On Geopolitical Applications Beb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fine-tuning/why-might-i-wish-to-fine-tune-an-llm-eb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Why Might I Wish To Fine Tune An Llm Eb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_13" id="__nav_1_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Geography And Culture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_13">
+            <span class="md-nav__icon md-icon"></span>
+            Geography And Culture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../geography-and-culture/llm-development-in-asia-db" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm Development In Asia Db
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../geography-and-culture/most-llms-have-an-inherently-american-worldview-dbdc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Most Llms Have An Inherently American Worldview Dbdc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_14" id="__nav_1_14_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hardware
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_14">
+            <span class="md-nav__icon md-icon"></span>
+            Hardware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hardware/hardware-that-is-specialised-for-running-llms-fecb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hardware That Is Specialised For Running Llms Fecb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_15" id="__nav_1_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Im Curious
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_15">
+            <span class="md-nav__icon md-icon"></span>
+            Im Curious
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/are-llms-always-restricted-to-focusing-on-retrospective-information-bfbdd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Are Llms Always Restricted To Focusing On Retrospective Information Bfbdd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/are-there-already-collections-of-llm-outputs-out-there-bb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Are There Already Collections Of Llm Outputs Out There Bb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/are-there-llm-classifications-ffbb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Are There Llm Classifications Ffbb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/does-more-parameters-always-mean-better-performance_-bfb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Does More Parameters Always Mean Better Performance Bfb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/how-can-some-llms-take-up-so-little-space-ced" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Can Some Llms Take Up So Little Space Ced
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/how-do-llms-analyse-images_-feb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Do Llms Analyse Images Feb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/how-do-you-work-with-multiple-custom-gpts-ad" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Do You Work With Multiple Custom Gpts Ad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/how-does-chatgpt-produce-better-software-recs-than-google-edd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Does Chatgpt Produce Better Software Recs Than Google Edd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/how-does-eleuther-ai-offer-gpts-bc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Does Eleuther Ai Offer Gpts Bc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/how-llms-generate-responses-cd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Llms Generate Responses Cd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/how-llms-learn-colloquialisms-ce" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Llms Learn Colloquialisms Ce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/the-forgotten-llms-bef" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Forgotten Llms Bef
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/what-do-llm-model-variants-mean-bcfd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What Do Llm Model Variants Mean Bcfd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/why-are-there-so-many-self-hostable-llms-ecfe" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Why Are There So Many Self Hostable Llms Ecfe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/why-do-llms-need-gpu-resources-specifically_-cff" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Why Do Llms Need Gpu Resources Specifically Cff
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../im-curious/why-is-context-such-a-challenge-for-llms-ac" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Why Is Context Such A Challenge For Llms Ac
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_16" id="__nav_1_16_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Image Gen
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_16">
+            <span class="md-nav__icon md-icon"></span>
+            Image Gen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_16_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_16_1" id="__nav_1_16_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Dalle
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_16_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_16_1">
+            <span class="md-nav__icon md-icon"></span>
+            Dalle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../image-gen/dalle/dalle-standard-res" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dalle Standard Res
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../image-gen/what-does-inpainting-mean-%28ai-generated-images%29-ed" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What Does Inpainting Mean (ai Generated Images) Ed
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_17" id="__nav_1_17_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Local Llms
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_17">
+            <span class="md-nav__icon md-icon"></span>
+            Local Llms
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llms/can-you-make-a-local-llm-app-that-has-an-interactive-conversation-component-bc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Can You Make A Local Llm App That Has An Interactive Conversation Component Bc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llms/could-you-use-a-local-llm-for-search-data-retrieval-eb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Could You Use A Local Llm For Search Data Retrieval Eb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llms/desktop-llm-apps-with-opensuse-support-beacaa" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desktop Llm Apps With Opensuse Support Beacaa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llms/how-do-local-llms-handle-context-management-and-tokenisation_-eec" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Do Local Llms Handle Context Management And Tokenisation Eec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llms/how-to-run-an-llm-locally---guis-e" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How To Run An Llm Locally Guis E
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_17_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_17_6" id="__nav_1_17_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lmstudio
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_17_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_17_6">
+            <span class="md-nav__icon md-icon"></span>
+            Lmstudio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llms/lmstudio/inference-parameters-in-lm-studio-explained-d" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inference Parameters In Lm Studio Explained D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llms/some-real-local-llm-use-cases-abc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Some Real Local Llm Use Cases Abc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llms/well-known-llms-run-locally" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Well Known Llms Run Locally
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../local-llms/which-llm-apis-can-be-used-on-jan-%28et-al%29-fdfe" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Which Llm Apis Can Be Used On Jan (et Al) Fdfe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_18" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_18" id="__nav_1_18_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_18">
+            <span class="md-nav__icon md-icon"></span>
+            Models
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_18_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_18_1" id="__nav_1_18_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Google
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_18_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_18_1">
+            <span class="md-nav__icon md-icon"></span>
+            Google
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/google/gemma-series-of-llms-bead" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gemma Series Of Llms Bead
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_18_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_18_2" id="__nav_1_18_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Grok
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_18_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_18_2">
+            <span class="md-nav__icon md-icon"></span>
+            Grok
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/grok/the-grok-llms-acd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Grok Llms Acd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_18_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_18_3" id="__nav_1_18_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lemistral
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_18_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_18_3">
+            <span class="md-nav__icon md-icon"></span>
+            Lemistral
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/lemistral/le-mistral-current-models-explained-" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Le Mistral Current Models Explained
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_18_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_18_4" id="__nav_1_18_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Model Comparisons
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_18_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_18_4">
+            <span class="md-nav__icon md-icon"></span>
+            Model Comparisons
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/model-comparisons/comparing-gpt-o-with-o-mini-dcea" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comparing Gpt O With O Mini Dcea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/model-comparisons/gpt-o-vs.-o-turbo-caf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gpt O Vs. O Turbo Caf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../models/model-comparisons/mistral-large--vs.-gpt--and-claude-d" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mistral Large Vs. Gpt And Claude D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_19" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_19" id="__nav_1_19_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Multimodal Llms
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_19_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_19">
+            <span class="md-nav__icon md-icon"></span>
+            Multimodal Llms
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multimodal-llms/list-of-file-types-supported-by-gpto-ec" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List Of File Types Supported By Gpto Ec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_20" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_20" id="__nav_1_20_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Non Personal Use
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_20_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_20">
+            <span class="md-nav__icon md-icon"></span>
+            Non Personal Use
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_20_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_20_1" id="__nav_1_20_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Enterprise Llm Use
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_20_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_20_1">
+            <span class="md-nav__icon md-icon"></span>
+            Enterprise Llm Use
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../non-personal-use/enterprise-llm-use/are-there-llms-that-are-more-favored-among-enterprise-users_-bfa" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Are There Llms That Are More Favored Among Enterprise Users Bfa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../non-personal-use/enterprise-llm-use/how-are-businesses-using-llms---or-beginning-to-ddb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Are Businesses Using Llms Or Beginning To Ddb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../non-personal-use/enterprise-llm-use/llm-intended-for-business-use-ffc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm Intended For Business Use Ffc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../non-personal-use/enterprise-llm-use/llm-usage-among-businesses---stats-ea" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm Usage Among Businesses Stats Ea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../non-personal-use/enterprise-llm-use/llm-use-among-businesses-eafede" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm Use Among Businesses Eafede
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_20_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_20_2" id="__nav_1_20_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Government Llm Adoption
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_20_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_20_2">
+            <span class="md-nav__icon md-icon"></span>
+            Government Llm Adoption
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../non-personal-use/government-llm-adoption/government-use-of-llms-aacff" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Government Use Of Llms Aacff
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_21" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_21" id="__nav_1_21_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Platforms And Companies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_21">
+            <span class="md-nav__icon md-icon"></span>
+            Platforms And Companies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_21_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_21_1" id="__nav_1_21_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Chatgpt
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_21_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_21_1">
+            <span class="md-nav__icon md-icon"></span>
+            Chatgpt
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platforms-and-companies/chatgpt/chatgpt---web-ui-vs-api-cost-estimate-cba" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chatgpt Web Ui Vs Api Cost Estimate Cba
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platforms-and-companies/chatgpt/chatgpt-data-exploration-prompt-ideas-bdd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chatgpt Data Exploration Prompt Ideas Bdd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platforms-and-companies/chatgpt/chatgpt-enabling-learning-ea" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chatgpt Enabling Learning Ea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platforms-and-companies/chatgpt/chatgpt-use-case-ui-idea---exploring-cfe" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chatgpt Use Case Ui Idea Exploring Cfe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platforms-and-companies/chatgpt/chatgpt-voice-apps-for-android-acff" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chatgpt Voice Apps For Android Acff
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platforms-and-companies/chatgpt/how-chatgpt-continuous-improvement-works-cd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Chatgpt Continuous Improvement Works Cd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../platforms-and-companies/what-is-alabs_-fa" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What Is Alabs Fa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_22" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_22" id="__nav_1_22_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prompt Eng
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_22_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_22">
+            <span class="md-nav__icon md-icon"></span>
+            Prompt Eng
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_22_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_22_1" id="__nav_1_22_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Evaluation Prompts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_22_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_22_1">
+            <span class="md-nav__icon md-icon"></span>
+            Evaluation Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/evaluation-prompts/library-of-prompts-for-testing-llms-abee" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Library Of Prompts For Testing Llms Abee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/frameworks-for-prompt-engineering-cd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frameworks For Prompt Engineering Cd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_22_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_22_3" id="__nav_1_22_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prompt Eng Careers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_22_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_22_3">
+            <span class="md-nav__icon md-icon"></span>
+            Prompt Eng Careers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/prompt-eng-careers/prompt-engineering-certifications-fee" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt Engineering Certifications Fee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/prompt-eng-careers/prompt-engineering-explained-adfbd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt Engineering Explained Adfbd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_22_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_22_4" id="__nav_1_22_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prompt Eng Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_22_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_22_4">
+            <span class="md-nav__icon md-icon"></span>
+            Prompt Eng Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/prompt-eng-tools/prompt-evaluation-tools-that-can-be-deployed-locally-be" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt Evaluation Tools That Can Be Deployed Locally Be
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_22_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_22_5" id="__nav_1_22_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Specific Strategies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_22_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_22_5">
+            <span class="md-nav__icon md-icon"></span>
+            Specific Strategies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_22_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_22_5_1" id="__nav_1_22_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Chain Of Thought
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_22_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_22_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Chain Of Thought
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/specific-strategies/chain-of-thought/chain-of-thought-prompting-ddb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chain Of Thought Prompting Ddb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_22_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_22_5_2" id="__nav_1_22_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Chunking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_22_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_22_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Chunking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/specific-strategies/chunking/how-to-use-chunking-with-a-prompt-adbebf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How To Use Chunking With A Prompt Adbebf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_22_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_22_5_3" id="__nav_1_22_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Zero Shot
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_22_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_22_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Zero Shot
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/specific-strategies/zero-shot/zero-shot-prompting-explained-cfefd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Zero Shot Prompting Explained Cfefd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/techniques" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Techniques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/the-future-of-prompt-engineering---an-outlook-ede" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Future Of Prompt Engineering An Outlook Ede
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompt-eng/tools-like-prompt-source-fef" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools Like Prompt Source Fef
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_23" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_23" id="__nav_1_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prompting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_23_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_23">
+            <span class="md-nav__icon md-icon"></span>
+            Prompting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/how-should-i-format-saved-prompts-efcb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Should I Format Saved Prompts Efcb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/how-to-use-long-prompts-in-llm-scripts-cbfb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How To Use Long Prompts In Llm Scripts Cbfb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/how-to-write-prompts-inside-of-scripts-with-openai-api-af" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How To Write Prompts Inside Of Scripts With Openai Api Af
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/prompt-development-interview-dcbd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt Development Interview Dcbd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/prompt-management-tools-worth-checking-out-ecee" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt Management Tools Worth Checking Out Ecee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/prompt-reframing-explained-cde" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt Reframing Explained Cde
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/prompt-templates-for-generating-images-from-context-setting-image-acdaabb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt Templates For Generating Images From Context Setting Image Acdaabb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/prompt-templates-for-generating-tech-specs-for-resting-projects-ffaf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompt Templates For Generating Tech Specs For Resting Projects Ffaf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/prompting-approaches-for-document-formatting-c" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompting Approaches For Document Formatting C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/prompting-for-specific-aspect-ratios-acdde" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompting For Specific Aspect Ratios Acdde
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/prompting-sprint-guidance-document-bacf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompting Sprint Guidance Document Bacf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/prompting-tips-for-working-with-large-inputs-past-the-token-limit-dcdac" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prompting Tips For Working With Large Inputs Past The Token Limit Dcdac
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prompting/which-languages-does-prompting-happen-in-adaa" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Which Languages Does Prompting Happen In Adaa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_24" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_24" id="__nav_1_24_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_24_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_24">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/conda-packages-for-llm-work-adce" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conda Packages For Llm Work Adce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/conda-packages-for-nlp-afd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conda Packages For Nlp Afd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/conda-packages-for-prompt-engineering-ba" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conda Packages For Prompt Engineering Ba
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/conda-packages-related-to-data-anlaytics-cc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conda Packages Related To Data Anlaytics Cc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/conda-packges-for-ai-%28general%29-fde" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conda Packges For Ai (general) Fde
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_25" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_25" id="__nav_1_25_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Rag
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_25_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_25">
+            <span class="md-nav__icon md-icon"></span>
+            Rag
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rag/major-rags-and-open-source-rags-acfd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Major Rags And Open Source Rags Acfd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rag/test-llm-%2B-rag-deployments-in-the-cloud-%28saas%29-ac" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test Llm + Rag Deployments In The Cloud (saas) Ac
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rag/the-emergence-of-rag-daaca" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Emergence Of Rag Daaca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rag/why-might-i-want-to-set-up-my-own-rag-system_-bf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Why Might I Want To Set Up My Own Rag System Bf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_26" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_26" id="__nav_1_26_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Self Hosting
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_26_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_26">
+            <span class="md-nav__icon md-icon"></span>
+            Self Hosting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../self-hosting/big-agi-vs.-librechat-cfdfa" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Big Agi Vs. Librechat Cfdfa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_27" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_27" id="__nav_1_27_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Storage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_27_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_27">
+            <span class="md-nav__icon md-icon"></span>
+            Storage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    How Can I Improve On My Current System For Storing Outputs De
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-can-i-improve-this-structure-for-storing-gpt-outputs-in-obsidian-bdbb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Can I Improve This Structure For Storing Gpt Outputs In Obsidian Bdbb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_27_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_27_3" id="__nav_1_27_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Output Storage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_27_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_27_3">
+            <span class="md-nav__icon md-icon"></span>
+            Output Storage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../output-storage/claude-on-benefits-of-storing-outputs-in-a-km-ee" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Claude On Benefits Of Storing Outputs In A Km Ee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../output-storage/claude-on-why-storing-llm-outputs-is-not-_stupid_-fcee" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Claude On Why Storing Llm Outputs Is Not Stupid Fcee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../output-storage/exploring-vector-databases-for-storing-markdown-repository-db" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exploring Vector Databases For Storing Markdown Repository Db
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../output-storage/finding-a-better-way-to-capture-llm-outputs-cbf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Finding A Better Way To Capture Llm Outputs Cbf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../output-storage/gpts-recommendations-for-saving-chats-ae" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gpts Recommendations For Saving Chats Ae
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_27_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_27_4" id="__nav_1_27_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prompt Storage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_27_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_27_4">
+            <span class="md-nav__icon md-icon"></span>
+            Prompt Storage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prompt-storage/saving-prompts-in-markdown-abb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Saving Prompts In Markdown Abb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../store-outputs-and-prompts-automatically.-how-to-do-this-caaf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Store Outputs And Prompts Automatically. How To Do This Caaf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_27_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_27_6" id="__nav_1_27_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Vector Dbs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_27_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_27_6">
+            <span class="md-nav__icon md-icon"></span>
+            Vector Dbs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vector-dbs/vector-db-for-output-storage-dd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vector Db For Output Storage Dd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ways-prompts-and-outputs-could-be-stored-da" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ways Prompts And Outputs Could Be Stored Da
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_28" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_28" id="__nav_1_28_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Templates
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_28_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_28">
+            <span class="md-nav__icon md-icon"></span>
+            Templates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../templates/format-suggestions-for-experiment-reports-%28llms%29-abab" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Format Suggestions For Experiment Reports (llms) Abab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_29" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_29" id="__nav_1_29_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Testing And Evaluation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_29_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_29">
+            <span class="md-nav__icon md-icon"></span>
+            Testing And Evaluation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../testing-and-evaluation/best-practices-for-testing-gpts-%26-gpt-outputs-ccdad" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices For Testing Gpts & Gpt Outputs Ccdad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../testing-and-evaluation/existing-frameworks-for-llm-evaluation-based-on-prompts-" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Existing Frameworks For Llm Evaluation Based On Prompts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_30" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_30" id="__nav_1_30_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    The Industry
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_30_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_30">
+            <span class="md-nav__icon md-icon"></span>
+            The Industry
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../the-industry/how-much-have-major-llm-providers-open-sourced-their-models_-ccfd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Much Have Major Llm Providers Open Sourced Their Models Ccfd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../the-industry/major-llm-conferences-bcbb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Major Llm Conferences Bcbb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../the-industry/major-llm-developments-d" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Major Llm Developments D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_31" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_31" id="__nav_1_31_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tokenisation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_31_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_31">
+            <span class="md-nav__icon md-icon"></span>
+            Tokenisation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tokenisation/can-you-estimate-tokenisation-limits-when-working-with-long-documents-cbd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Can You Estimate Tokenisation Limits When Working With Long Documents Cbd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tokenisation/cloud-tools-for-calculating-tokenisation-usage-from-text-ddaa" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloud Tools For Calculating Tokenisation Usage From Text Ddaa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tokenisation/how-do-you-calculate-tokensation-ffd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Do You Calculate Tokensation Ffd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tokenisation/llm-with-the-highest-token-limit-dac" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm With The Highest Token Limit Dac
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tokenisation/tokenisation-in-llms---business-primer-aedf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tokenisation In Llms Business Primer Aedf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_32" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_32" id="__nav_1_32_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_32_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_32">
+            <span class="md-nav__icon md-icon"></span>
+            Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_32_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_32_1" id="__nav_1_32_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lang Chain
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_32_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_32_1">
+            <span class="md-nav__icon md-icon"></span>
+            Lang Chain
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/lang-chain/lang-chain-features-for-context-setting-d" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lang Chain Features For Context Setting D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/lang-chain/lang-chain-versus-llama-index-dbba" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lang Chain Versus Llama Index Dbba
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_33" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_33" id="__nav_1_33_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Training
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_33_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_33">
+            <span class="md-nav__icon md-icon"></span>
+            Training
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/the-mysteries-of-llm-training-data-dfe" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Mysteries Of Llm Training Data Dfe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/what%27s-currently-being-used-as-training-data_-dabe" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What's Currently Being Used As Training Data Dabe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../training/what-would-you-get-in-the-pile-a" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What Would You Get In The Pile A
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_34" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_34" id="__nav_1_34_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Uis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_34_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_34">
+            <span class="md-nav__icon md-icon"></span>
+            Uis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../uis/image-generation-guis-for-ai-programs-ebfea" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Image Generation Guis For Ai Programs Ebfea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_35" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_35" id="__nav_1_35_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Use Cases
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_35_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_35">
+            <span class="md-nav__icon md-icon"></span>
+            Use Cases
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/are-there-any-llms-specifically-for-live-news-monitoring-daff" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Are There Any Llms Specifically For Live News Monitoring Daff
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/can-llms-be-used-to-mine-use-cases-for-themselves_-bdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Can Llms Be Used To Mine Use Cases For Themselves Bdf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/can-you-use-llms-to-explain-code-in-natural-language_-aabd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Can You Use Llms To Explain Code In Natural Language Aabd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_35_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_35_4" id="__nav_1_35_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Career
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_35_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_35_4">
+            <span class="md-nav__icon md-icon"></span>
+            Career
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/career/llms-for-proactive-knowledge-gap-closing-afea" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llms For Proactive Knowledge Gap Closing Afea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_35_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_35_5" id="__nav_1_35_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Classification
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_35_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_35_5">
+            <span class="md-nav__icon md-icon"></span>
+            Classification
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/classification/how-to-get-an-llm-to-classify-markdown-files-aa" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How To Get An Llm To Classify Markdown Files Aa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_35_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_35_6" id="__nav_1_35_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Analysis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_35_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_35_6">
+            <span class="md-nav__icon md-icon"></span>
+            Data Analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/data-analysis/data-analytics-capabilities-of-llms-dccce" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Analytics Capabilities Of Llms Dccce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_35_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_35_7" id="__nav_1_35_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Vis
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_35_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_35_7">
+            <span class="md-nav__icon md-icon"></span>
+            Data Vis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/data-vis/local-llms-for-data-visualisation-c" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Local Llms For Data Visualisation C
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/generative-ai-use-cases-beyond-llms-and-image_-cde" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generative Ai Use Cases Beyond Llms And Image Cde
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_35_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_35_9" id="__nav_1_35_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Geopolitics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_35_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_35_9">
+            <span class="md-nav__icon md-icon"></span>
+            Geopolitics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/geopolitics/using-llms-for-geopolitical-scenario-modelling-" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Llms For Geopolitical Scenario Modelling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_35_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_35_10" id="__nav_1_35_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Personalised Learning
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_35_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_35_10">
+            <span class="md-nav__icon md-icon"></span>
+            Personalised Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/personalised-learning/how-could-i-set-up-a-customised-llm-_teacher__-add" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Could I Set Up A Customised Llm Teacher Add
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/personalised-learning/llms-ability-to-deliver-personalised-learning-experiences-eab" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llms Ability To Deliver Personalised Learning Experiences Eab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-cases/personalised-learning/llms-for-prompt-engineering-tuition-caa" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llms For Prompt Engineering Tuition Caa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_36" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_36" id="__nav_1_36_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Voice Control
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_36_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_36">
+            <span class="md-nav__icon md-icon"></span>
+            Voice Control
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voice-control/llms-with-deep-support-for-voice-cd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llms With Deep Support For Voice Cd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voice-control/voice-recognition-for-interfacing-with-llms-via-chrome-be" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Voice Recognition For Interfacing With Llms Via Chrome Be
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unsorted
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Unsorted
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/ai-animation-tools-ac" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ai Animation Tools Ac
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/alternatives-to-lm-studio-for-running-local-llms-af" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alternatives To Lm Studio For Running Local Llms Af
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/are-llms-a-type-of-ml-bdaa" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Are Llms A Type Of Ml Bdaa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/are-there-ai-tools-which-could-automatically-construct-a-graph-representation-of-textual-data-ead" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Are There Ai Tools Which Could Automatically Construct A Graph Representation Of Textual Data Ead
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/can-you-leverage-the-ability-to-use-llms-in-a-chat-interface-while-building-your-own-chat-frontend-cfd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Can You Leverage The Ability To Use Llms In A Chat Interface While Building Your Own Chat Frontend Cfd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/claude-and-chatgpt-web-ui-usage-limits-cec" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Claude And Chatgpt Web Ui Usage Limits Cec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/cloud-llms-for-parsing--page-pdfs-ea" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloud Llms For Parsing Page Pdfs Ea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/could-lang-chain-be-backed-by-a-graph-database-for-storage-aa" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Could Lang Chain Be Backed By A Graph Database For Storage Aa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/creating-a-personal-llm-derivative-eecc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating A Personal Llm Derivative Eecc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/custom-uis-for-llms-dbe" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Uis For Llms Dbe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/deploying-custom-llm-agents-edca" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploying Custom Llm Agents Edca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/do-llms-only-improve-with-new-model-releases_-cebb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Do Llms Only Improve With New Model Releases Cebb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/do-local-code-gen-llms-do-better-than-cloud-ai_-ed" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Do Local Code Gen Llms Do Better Than Cloud Ai Ed
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/doing-topic-cluster-analysis-on-gpt-vault-abf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Doing Topic Cluster Analysis On Gpt Vault Abf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/existing-solutions-for-prompt-and-output-management-ffdb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Existing Solutions For Prompt And Output Management Ffdb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/exploring-the-idea-of-an-ar-world-built-on-top-of-a-graph-database-e" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exploring The Idea Of An Ar World Built On Top Of A Graph Database E
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/extract-prompts-using-a-script---obsidian-a" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extract Prompts Using A Script Obsidian A
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/free-llms-for-open-source-ba" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Free Llms For Open Source Ba
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/frontends-for-the-conversational-llm-experience-badeb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frontends For The Conversational Llm Experience Badeb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/gaining-a-deeper-understanding-of-llms-da" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gaining A Deeper Understanding Of Llms Da
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/general-purpose-llm-agent-exploration-eac" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General Purpose Llm Agent Exploration Eac
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/gpt-api-%28output%29-rate-limit-by-word-count-%28estimate%29-cdfdd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gpt Api (output) Rate Limit By Word Count (estimate) Cdfdd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/gpt-o-with-web-browsing---programmatic-use-edbc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gpt O With Web Browsing Programmatic Use Edbc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/gpt-recommendations-for-developing-an-effective-prompt-library-bfeb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gpt Recommendations For Developing An Effective Prompt Library Bfeb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/gpt-to-regular-llm-agent-config-dfcc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gpt To Regular Llm Agent Config Dfcc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/how-ai-and-ml-have-relevance-in-the-world-of-sustainability-reporting_-dbbebb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Ai And Ml Have Relevance In The World Of Sustainability Reporting Dbbebb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/how-can-gpt-generate-outputs-from-inputs-with-long-documents-in-context-bcde" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Can Gpt Generate Outputs From Inputs With Long Documents In Context Bcde
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/how-long-might-programatically-parsing-%2C-notes-into-a-graph-database-take-dc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How Long Might Programatically Parsing , Notes Into A Graph Database Take Dc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/how-to-launch-obsidian-and-chatgpt-in-split-screen-ffeb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How To Launch Obsidian And Chatgpt In Split Screen Ffeb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/how-to-run-voyant-tools-locally-cda" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How To Run Voyant Tools Locally Cda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/how-to-set-up-a-testing-local-llm-%2B-rag-setup-" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How To Set Up A Testing Local Llm + Rag Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/how-to-use-modular-components-to-build-an-llm-interaction-app-bdaffc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How To Use Modular Components To Build An Llm Interaction App Bdaffc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/increased-personalisation-in-future-llms-aa" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Increased Personalisation In Future Llms Aa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/inference-quality-differences-between-variants-of-an-llm-dca" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inference Quality Differences Between Variants Of An Llm Dca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/intended-way-to-setup-prompt-foo-locally-dcd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intended Way To Setup Prompt Foo Locally Dcd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/interfaces-delivering-conversational-ai-in-a-better-way_-ca" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interfaces Delivering Conversational Ai In A Better Way Ca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/interfaces-for-accessing-multiple-llms-bcd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interfaces For Accessing Multiple Llms Bcd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/intermediate-solutions-for-scaled-up-ai-usage-caffd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intermediate Solutions For Scaled Up Ai Usage Caffd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/leveraging-screen-scraping-for-llm-output-capture-f" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leveraging Screen Scraping For Llm Output Capture F
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/llm-api-marketplace-db" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm Api Marketplace Db
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/llm-capabilities---an-overview-eafe" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm Capabilities An Overview Eafe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/llm-improvements-in--" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm Improvements In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/llm-interaction-classification-fbbccda" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm Interaction Classification Fbbccda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/llm-models_-networks-to-explore-beyond-hugging-face-fcfe" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm Models Networks To Explore Beyond Hugging Face Fcfe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/llm-number-approximations-afecfa" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llm Number Approximations Afecfa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/llms-and-ai-tools-for-basic-data-viz-applications-eb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llms And Ai Tools For Basic Data Viz Applications Eb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/llms-and-data-visualisation-ebb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llms And Data Visualisation Ebb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/llms-with-real-time-capabilities-cdb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llms With Real Time Capabilities Cdb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/llms-with-voice-mode-support-on-non-mobile-devices-dbe" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Llms With Voice Mode Support On Non Mobile Devices Dbe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/local-llms-on-laptop---suggestions-fa" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Local Llms On Laptop Suggestions Fa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/local-llms-that-could-offer-value-beyond-cloud-ai-b" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Local Llms That Could Offer Value Beyond Cloud Ai B
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/local-llms-with-recent-training-data-cutoff-ddd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Local Llms With Recent Training Data Cutoff Ddd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/looking-for-more-multi-llm-access-tools-for-power-users-dcec" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Looking For More Multi Llm Access Tools For Power Users Dcec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/most-intensive-llm-users-fb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Most Intensive Llm Users Fb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/most-scalable-llms-for-intensive-exploratory-work-aec" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Most Scalable Llms For Intensive Exploratory Work Aec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/new-companies-in-the-ai-%26-llm-space-" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    New Companies In The Ai & Llm Space
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/one-shop-prompting-dabe" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    One Shop Prompting Dabe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/online-llms-with-long-output-support-fe" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Online Llms With Long Output Support Fe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/online-promptathons-da" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Online Promptathons Da
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/openrouter-versus-provider-llms-fea" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Openrouter Versus Provider Llms Fea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/other-technical-llm-concepts-aaea" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other Technical Llm Concepts Aaea
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/proprietary-llms-that-have-been-developed-ebb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proprietary Llms That Have Been Developed Ebb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/provisioning-a-self-hosted-llm-on-the-cloud-fe" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Provisioning A Self Hosted Llm On The Cloud Fe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/rank-the-major-llms-by-training-data-cutoff-time-ad" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rank The Major Llms By Training Data Cutoff Time Ad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/self-hostable-llm-frontends-with-managed-storage-capability-da" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Self Hostable Llm Frontends With Managed Storage Capability Da
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/simplified-template-for-ai-assisted-dev-projects-bcedf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simplified Template For Ai Assisted Dev Projects Bcedf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/some-more-llm-assistants-b" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Some More Llm Assistants B
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/summary-of-llm-api-marketplaces-fae" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Summary Of Llm Api Marketplaces Fae
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/test-prompts-for-evaluating-llm-cencorship-ee" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test Prompts For Evaluating Llm Cencorship Ee
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/the-biggest-listing-of-llms-on-the-internet-abb" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Biggest Listing Of Llms On The Internet Abb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/the-capabilities-of-gpt-ca" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Capabilities Of Gpt Ca
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/tools-that-allow-storage-of-gpt-interactions-in-object-storage-aaec" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools That Allow Storage Of Gpt Interactions In Object Storage Aaec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/truly-easy-guis-for-vector-dbs-eef" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Truly Easy Guis For Vector Dbs Eef
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/truncating-news-before-sending-to-gpt-due-to-token-limitation-aeec" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Truncating News Before Sending To Gpt Due To Token Limitation Aeec
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/using-chatgpt-and-llms-at-scale-and-with-better-indexing-deecd" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Chatgpt And Llms At Scale And With Better Indexing Deecd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../unsorted/using-llamaindex-for-building-chatbot-with-postgres-data-saving-edbe" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Llamaindex For Building Chatbot With Postgres Data Saving Edbe
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="prompt">Prompt</h1>
+<p>Here's the system I'm currently using for running prompts through GPT and saving them in a system that I can control. This is ultimately the objective! However, I would really love to have a more convenient workflow. For one, I've love to be using a knowledge manager with an online UI rather than using a desktop app. .And I'd prefer to be using one integrated tool rather than trying to use two together like this. However, it's proven a highly effective technique for using GPT and LLMs to quickly ideate, brainstorm, gather knowledge, and build up a sort of personal wiki. Any thoughts for how to better implement it?</p>
+<h1 id="output">Output</h1>
+<p>Your current workflow using ChatGPT for ideation, brainstorming, and knowledge gathering is robust, especially with the integration of Obsidian for local storage and organization of prompts, outputs, and context. However, you are seeking improvements, particularly around:</p>
+<ol>
+<li><strong>Unified online tool</strong>: You want to move away from using a desktop-based system (like Obsidian) toward an online UI that centralizes prompt interaction and knowledge management.</li>
+<li><strong>Simplification</strong>: Rather than using multiple tools, you're aiming for a more streamlined, all-in-one solution that would integrate your prompt workflows, organization, and storage.</li>
+</ol>
+<p>Here are some suggestions for how you could improve this setup:</p>
+<h3 id="1-online-ui-with-a-knowledge-management-system">1. Online UI with a Knowledge Management System</h3>
+<ul>
+<li><strong>Notion or Coda</strong>: Both of these are powerful knowledge management tools with online UIs, and they support rich-text documents, links, and embedding, which would be useful for your workflow. You can also integrate automation using tools like Zapier or Make to automatically save ChatGPT outputs into these platforms.</li>
+<li><strong>Tana</strong>: Tana is an emerging platform built with hierarchical databases and structured notes, making it ideal for managing a personal wiki while offering online UI access.</li>
+<li><strong>Logseq (with Sync)</strong>: While primarily a desktop app like Obsidian, Logseq offers built-in syncing between devices, allowing for both offline and online access. It supports markdown, which would allow for seamless migration from Obsidian.</li>
+</ul>
+<h3 id="2-all-in-one-solution-for-prompts-knowledge-management">2. All-in-One Solution for Prompts &amp; Knowledge Management</h3>
+<ul>
+<li><strong>Mem.ai</strong>: Mem.ai provides AI-powered note-taking, knowledge organization, and even prompting capabilities directly within its system. It integrates the AI experience directly into a unified knowledge base, similar to what you are doing with Obsidian and ChatGPT, but fully online.</li>
+<li><strong>Anytype.io</strong>: Another emerging knowledge manager that allows you to store and organize your knowledge with a UI-friendly approach, with a focus on decentralization and control of your data. It also integrates with external tools and databases.</li>
+</ul>
+<h3 id="3-automation-to-connect-gpt-and-online-knowledge-manager">3. Automation to Connect GPT and Online Knowledge Manager</h3>
+<ul>
+<li><strong>Zapier/Make with Obsidian or Notion</strong>: Automating your process could be as simple as setting up workflows between ChatGPT and a knowledge management platform. For example:</li>
+<li>Use an API to capture prompt and output data from ChatGPT and directly push it to Notion, Coda, or a similar system, structured in the way you currently do in Obsidian.</li>
+<li>Automate syncing of your files across cloud services (like B2) using triggers based on when files are modified or added.</li>
+</ul>
+<h3 id="4-web-based-alternative-to-obsidian">4. Web-based Alternative to Obsidian</h3>
+<ul>
+<li>If you prefer to keep markdown-based notes with a similar functionality to Obsidian but accessible online, <strong>Dendron</strong> is a markdown-based note-taking tool with advanced knowledge graph features that is available via a browser.</li>
+</ul>
+<p>By switching to one of these tools or workflows, you could create a more seamless, integrated experience for generating, saving, and retrieving your ideas and knowledge from GPT and still maintain control over your data.</p>
+<p>Would you prefer a detailed suggestion on implementing any specific combination of tools, or should I help outline further potential integrations?</p>
+<h1 id="objection">Objection</h1>
+<p>The problem I have with all the cloud solutions (including Tana) is that almost none of them allow users to backup their data automatically. This point may seem trivial, but I think it's highly significant. Without the ability to backup your data automatically and reliably, you're essentially committing all your data to a third party and you're reneging the ability to manage and own it. I think that's a terrible idea for a knowledge management system where the data is essentially all the value being created.</p>
+<h1 id="output_1">Output</h1>
+<p>You're absolutely right that automatic and reliable backups are crucial for a knowledge management system, especially when dealing with valuable data generated over time. Many cloud-based solutions, as you mentioned, fail to provide transparent and user-controlled backup options, putting the control of your data in the hands of a third party, which can lead to potential risks.</p>
+<h3 id="solutions-that-prioritize-data-ownership-backups">Solutions that Prioritize Data Ownership &amp; Backups</h3>
+<p>Given your focus on <strong>data ownership and backup</strong> reliability, here are some alternative approaches and tools that ensure you're in control of your data while still providing the convenience of a powerful knowledge management workflow.</p>
+<h3 id="1-logseq-with-git-based-backups">1. Logseq with Git-Based Backups</h3>
+<ul>
+<li><strong>Why it works</strong>: Logseq offers local-first note-taking (similar to Obsidian) while supporting markdown and org-mode files. It has built-in options for automatic syncing with GitHub or GitLab, allowing you to have complete control over your data with versioning. You can also set up scripts to back up to local drives or cloud storage (B2, Google Drive, etc.).</li>
+<li><strong>Automatic backups</strong>: With Git-based backups, each time you make changes, they can be pushed automatically to a remote repository, giving you a full history of edits. Additionally, cloud syncing can be layered in for access across devices.</li>
+<li><strong>Online UI</strong>: Logseq’s web app is still in development, but the desktop app with cloud syncing (through Git) offers a similar experience to the cloud-based knowledge managers.</li>
+</ul>
+<h3 id="2-self-hosted-solutions">2. Self-Hosted Solutions</h3>
+<ul>
+<li><strong>Nextcloud with Joplin or Obsidian</strong>: If you prefer total control, running your own <strong>Nextcloud</strong> instance can be an excellent solution. Nextcloud gives you cloud-based file storage, like Google Drive or Dropbox, but with self-hosting and full control of backups. You can use Joplin or Obsidian for markdown-based note-taking and sync your vault to your Nextcloud server. This way, your data is always under your control, and automatic backups can be configured as needed.</li>
+<li><strong>Backup Control</strong>: You can schedule automatic backups of your Nextcloud instance to any other cloud service or physical storage.</li>
+<li><strong>Accessibility</strong>: Nextcloud offers a web interface, so it feels like a cloud solution, but you still retain control.</li>
+<li><strong>TiddlyWiki (Self-Hosted)</strong>: TiddlyWiki is another self-hosted, highly customizable knowledge management tool. It runs in a browser but saves data locally or on your own cloud storage. You can set it up to sync automatically with services like Nextcloud, Dropbox, or B2 using external tools. TiddlyWiki gives you complete ownership while maintaining a clean UI for knowledge management.</li>
+</ul>
+<h3 id="3-sync-obsidian-with-cloud-backup-tools">3. Sync Obsidian with Cloud Backup Tools</h3>
+<ul>
+<li><strong>Obsidian (with Cloud Sync + Automated Backups)</strong>: While you're already using Obsidian locally, you can set up <strong>automated syncing</strong> with <strong>rclone</strong> to back up to a cloud service of your choice, such as B2, Google Drive, or even a self-hosted cloud.</li>
+<li><strong>How it works</strong>: You can configure Obsidian to auto-save files locally, and then rclone (or similar tools) can sync these files to your preferred cloud storage solution on a schedule, ensuring you always have backups.</li>
+<li><strong>Advantage</strong>: You maintain your desktop-based workflow with Obsidian but integrate cloud accessibility and full control over your backups.</li>
+</ul>
+<h3 id="4-custom-solutions-with-api-integrations">4. Custom Solutions with API Integrations</h3>
+<ul>
+<li><strong>Custom Knowledge Manager</strong>: If you're comfortable with coding, you could create a <strong>custom knowledge manager</strong> that integrates with ChatGPT via the API and saves outputs to a local or self-hosted database (e.g., <strong>PostgreSQL</strong>). You could use a web-based interface (built with <strong>Streamlit</strong> or <strong>Flask</strong>) for online access, while maintaining full control over backups and automation.</li>
+<li><strong>Backup Automation</strong>: The database can be automatically backed up using cron jobs or other automated processes to services like <strong>B2</strong>, <strong>AWS</strong>, or <strong>self-hosted storage</strong>.</li>
+</ul>
+<h3 id="5-other-considerations">5. Other Considerations</h3>
+<ul>
+<li><strong>Backup to a Physical Device</strong>: Even if you're using cloud-based tools, having a <strong>NAS (Network-Attached Storage)</strong> device at home (like a Synology NAS) can add another layer of backup control. Many systems (including Obsidian with plugins like rclone) can automatically sync to a local NAS while also backing up to an online cloud service, providing a 3-2-1 backup strategy (3 copies of your data, 2 local, 1 off-site).</li>
+<li><strong>Interoperability</strong>: Focus on tools that use open formats like markdown, plaintext, or JSON, ensuring that your data is portable across systems. Obsidian and Logseq both excel at this by using open, human-readable file formats.</li>
+</ul>
+<h3 id="final-suggestion-combine-local-first-tools-with-cloud-access">Final Suggestion: Combine Local-First Tools with Cloud Access</h3>
+<p>For maximum control, you can <strong>combine a local-first tool like Obsidian</strong> with <strong>automatic syncing</strong> (using Nextcloud or rclone to any cloud service) while integrating API access to ChatGPT for prompt generation. This approach keeps your data in your control and ensures reliable backups, with flexibility for online access and collaboration.</p>
+<h1 id="objection-2">Objection 2</h1>
+<p>Firstly Logseq doesn't have a web UI. It neither exists nor is it under development. Secondly, I don't think that cobbling together many different tools makes any sense.</p>
+<h1 id="output_2">Output</h1>
+<p>Thank you for the clarification. Given your emphasis on having a more <strong>integrated solution</strong> without needing to cobble together multiple tools and ensuring <strong>data ownership with reliable backups</strong>, here are a few refined ideas that could provide a better balance between convenience and control:</p>
+<h3 id="1-obsidian-with-a-simplified-workflow-but-cloud-accessible">1. Obsidian with a Simplified Workflow (but Cloud Accessible)</h3>
+<p>Since you already find Obsidian effective and it gives you full control over your data, but are looking for an <strong>online UI</strong>:</p>
+<ul>
+<li><strong>Obsidian Sync</strong>: Obsidian has its <strong>official sync service</strong> which, while cloud-based, stores all your vaults in an encrypted form where you retain control of the keys. This gives you cloud access across devices without fully relinquishing control. The local-first approach still applies, so you can take backups or sync to another service without depending entirely on Obsidian's cloud.</li>
+<li><strong>Mobile/Tablet Access</strong>: Obsidian’s mobile app works well with Obsidian Sync, so if you need to access your vault online or on-the-go, this can be an option.</li>
+</ul>
+<p>This would allow you to <strong>retain full local control</strong> of your data while simplifying access and syncing. It's not a true web UI, but it gives flexibility without the need for many tools.</p>
+<h3 id="2-self-hosted-all-in-one-solution">2. Self-Hosted, All-in-One Solution</h3>
+<p>Instead of relying on multiple tools, a <strong>self-hosted all-in-one knowledge management system</strong> may be ideal. This way, you can ensure data control while having the convenience of a unified web interface.</p>
+<ul>
+<li><strong>Outline</strong>: This is a self-hosted knowledge base platform that offers a web UI, supports markdown, and integrates well with <strong>Git-based backups</strong>. You have full control over your server and can set up automated backups to cloud services like Backblaze B2 or AWS S3.</li>
+<li><strong>Features</strong>: You can run Outline on your own server or a VPS, ensuring your data is stored locally. Automated backups can be handled through cron jobs, and it offers both a user-friendly web interface and collaborative features.</li>
+<li><strong>Dendron (Self-hosted, Web Access)</strong>: You can deploy <strong>Dendron</strong> on a self-hosted instance, which offers a knowledge graph, markdown support, and web-based access. This provides flexibility and allows you to back up your data reliably. Dendron works well with Git for syncing, and you can control all backups with standard tooling.</li>
+<li><strong>Wiki.js</strong>: A self-hosted platform that offers a beautiful web UI, markdown support, and integrates with Git-based backup for automatic syncing and version control. It provides a more cohesive and simplified experience than cobbling together different services.</li>
+</ul>
+<h3 id="3-custom-knowledge-manager-built-on-open-tools">3. Custom Knowledge Manager Built on Open Tools</h3>
+<p>If you want <strong>complete control</strong> and prefer a single, integrated tool, but are willing to invest a little effort in setup, building a custom solution that provides an online UI while automating backups could be a path forward:</p>
+<ul>
+<li><strong>Base System</strong>: You could build a <strong>web-based interface</strong> using a tool like <strong>Streamlit</strong> or <strong>Flask</strong>. The backend can integrate with a markdown-based file system (like Obsidian's) and provide a conversational interface with ChatGPT via API. All data would be stored in a <strong>self-hosted environment</strong>.</li>
+<li><strong>Backup Automation</strong>: By leveraging tools like <strong>rclone</strong> or cron jobs, you can ensure automatic backups to any cloud provider you trust, such as B2, Google Drive, or a NAS.</li>
+</ul>
+<h3 id="4-customizing-obsidian-further-for-online-access">4. Customizing Obsidian Further for Online Access</h3>
+<p>If you'd like to stick with Obsidian but improve access beyond the desktop:</p>
+<ul>
+<li><strong>Third-party Sync Tools</strong>: You can use tools like <strong>Syncthing</strong> or <strong>rclone</strong> to enable real-time synchronization of your Obsidian vault across devices and servers. This would give you access to your vault on any platform, with seamless syncing.</li>
+<li><strong>Obsidian Publish (Private)</strong>: Though not strictly a "web UI," Obsidian <strong>Publish</strong> can serve as a lightweight solution for accessing your markdown content online. You could use it for publishing your notes in a secure, private environment, while still managing everything locally.</li>
+</ul>
+<h3 id="5-a-more-customizable-all-in-one-solution">5. A More Customizable All-in-One Solution</h3>
+<p>If you're willing to experiment, <strong>TiddlyWiki on Node.js</strong> can be self-hosted and offers full customization, web access, and complete control over your data. You can store everything locally and configure backups or sync with tools like rclone. This option combines:</p>
+<ul>
+<li>Web-based access</li>
+<li>Markdown support</li>
+<li>Full control over backups and data ownership</li>
+</ul>
+<p>Unlike the cloud tools you’ve ruled out, this keeps the focus on data control while still giving you an integrated experience.</p>
+<h3 id="final-thoughts">Final Thoughts</h3>
+<p>Your goal of avoiding tool fragmentation while keeping <strong>full control over your data</strong> (with reliable backups) is a challenge many cloud solutions don't fully address. However, by focusing on self-hosted solutions that integrate markdown, web access, and automated backup features, you can achieve both the unified workflow and data ownership you're seeking.</p>
+<p>If any of these options align more with what you're envisioning, I can help you dive deeper into implementation steps!</p>
+<h1 id="prompt_1">Prompt</h1>
+<p>Do you think I could find someone who could install Outline on my server? It's notoriously difficult to set up. There are some deployment tools but then you're stuck with the problem of having a managed database that you can't really manage and back up yourself.</p>
+<h1 id="output_3">Output</h1>
+<p>Finding someone to help you install and configure <strong>Outline</strong> on your server is definitely possible, especially through freelance platforms or specialized dev-ops services. Outline can be tricky to set up due to its dependencies on <strong>PostgreSQL</strong>, <strong>Redis</strong>, and other backend services, as well as the complexities around managing backups for these services.</p>
+<h3 id="heres-how-you-can-approach-it">Here’s how you can approach it:</h3>
+<h3 id="1-freelance-platforms">1. Freelance Platforms</h3>
+<ul>
+<li><strong>Upwork</strong> or <strong>Freelancer</strong>: These platforms have many DevOps specialists who can help set up <strong>Outline</strong> on your server. You could search for developers with experience in setting up complex self-hosted applications, including database management (PostgreSQL), Docker, and backup configurations.</li>
+<li><strong>Fiverr</strong>: You could potentially find a gig for server setup here, though this might be better suited for smaller-scale or less complex jobs.</li>
+</ul>
+<h3 id="2-managed-devops-services">2. Managed DevOps Services</h3>
+<ul>
+<li><strong>Cloudways</strong>: If you're using cloud services like AWS, DigitalOcean, or Google Cloud, you could leverage a service like <strong>Cloudways</strong> to simplify server management. They provide one-click deployments for applications and often have add-on services for custom setups.</li>
+<li><strong>DigitalOcean App Platform</strong>: DigitalOcean also offers a platform that can simplify some aspects of deployment, though you'll still need to customize the setup for Outline.</li>
+<li><strong>VPS Providers with Managed Services</strong>: Some VPS providers (e.g., Linode, Vultr, or A2 Hosting) offer managed services where you can request setup help for specific applications like Outline.</li>
+</ul>
+<h3 id="3-outline-specific-resources">3. Outline-Specific Resources</h3>
+<ul>
+<li><strong>Outline’s GitHub Discussions and Forums</strong>: You can ask for help directly within Outline's community. There are likely developers familiar with the intricacies of the deployment process who can offer advice or services for a fee.</li>
+<li><strong>Dockerized Deployment</strong>: There’s a Docker option for Outline, which simplifies the installation process somewhat. A developer with Docker experience should be able to help you get that setup and make it easier to manage. However, it still requires careful configuration, especially for backups.</li>
+</ul>
+<h3 id="4-deployment-tools-with-managed-database">4. Deployment Tools with Managed Database</h3>
+<p>You're right that some deployment tools (e.g., Heroku, Railway) abstract away the database management, which can create limitations if you want full control over your backups. However, you can still:</p>
+<ul>
+<li><strong>Use a Self-Hosted PostgreSQL and Redis</strong>: Instead of using the managed database option provided by a platform, you can host PostgreSQL and Redis on your own server. This gives you full control over database management, including automated backups.</li>
+<li><strong>Automated Backups for PostgreSQL</strong>: You can set up cron jobs or scripts to automatically back up your PostgreSQL database at regular intervals to cloud storage services like B2 or AWS S3.</li>
+</ul>
+<h3 id="5-outline-alternatives-easier-to-manage">5. Outline Alternatives (Easier to Manage)</h3>
+<p>If Outline’s complexity becomes a major barrier, you might consider simpler self-hosted alternatives:</p>
+<ul>
+<li><strong>Wiki.js</strong>: Another open-source knowledge management tool with a much simpler setup compared to Outline. It offers a clean web UI, markdown support, and Git-based backups for full control over data.</li>
+<li><strong>HedgeDoc</strong>: A collaborative markdown editor that you can self-host. It’s easier to set up than Outline but also supports real-time editing and note management with full control over your data.</li>
+</ul>
+<h3 id="finding-someone-to-help-with-database-backup-configuration">Finding Someone to Help with Database Backup Configuration</h3>
+<p>Even if you can handle the initial installation, setting up <strong>automatic backups</strong> for PostgreSQL and Redis can be a bit involved. To simplify this:</p>
+<ul>
+<li><strong>Automated Backup Tools</strong>: Use tools like <strong>pg_dump</strong> (for PostgreSQL) to automatically create backups and store them in a safe location.</li>
+<li><strong>Backup Freelancers</strong>: You can find freelancers or specialized services to help you configure automatic backups through cron jobs or managed backup services like <strong>rclone</strong>.</li>
+</ul>
+<h3 id="conclusion">Conclusion:</h3>
+<p>If you'd like, I can help you outline a job posting for freelance platforms or guide you on what specific skills to look for in a developer. Alternatively, I can help break down a simpler self-hosted solution if you're open to something more manageable than Outline. Let me know how you'd like to proceed!</p>
+<h1 id="prompt_2">Prompt</h1>
+<p>Can you think of any way to deploy Outline easily onto your own infra?</p>
+<h1 id="output_4">Output</h1>
+<p>If you're looking for easy ways to deploy <strong>Outline</strong> on infrastructure that you own and manage, <strong>Docker</strong> is one of the best options, as it simplifies the setup and management of dependencies like PostgreSQL and Redis. Here’s a step-by-step guide for deploying Outline using Docker:</p>
+<h3 id="1-docker-compose-setup">1. Docker Compose Setup</h3>
+<p>Docker Compose allows you to manage the entire Outline stack (application, PostgreSQL, and Redis) through a single YAML configuration file. This is a straightforward way to get everything running with minimal manual setup.</p>
+<h4 id="step-1-install-docker-and-docker-compose">Step 1: Install Docker and Docker Compose</h4>
+<p>Ensure that Docker and Docker Compose are installed on your server. You can follow the official installation instructions:</p>
+<ul>
+<li><a href="https://docs.docker.com/get-docker/">Docker installation</a></li>
+<li><a href="https://docs.docker.com/compose/install/">Docker Compose installation</a></li>
+</ul>
+<h4 id="step-2-create-a-docker-compose-file">Step 2: Create a Docker Compose File</h4>
+<p>Create a directory for your Outline project, then create a <code>docker-compose.yml</code> file inside that directory:</p>
+<pre><code class="language-yaml">version: '3'
+services:
+  outline:
+    image: outlinewiki/outline
+    environment:
+      DATABASE_URL: postgres://outline:password@db/outline
+      REDIS_URL: redis://redis:6379
+      SECRET_KEY: your-random-secret-key
+      URL: http://your-domain.com
+      PORT: 3000
+      FORCE_HTTPS: 'true'  # Use this if you are serving Outline over HTTPS
+    ports:
+      - &quot;3000:3000&quot;
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: outline
+      POSTGRES_USER: outline
+      POSTGRES_PASSWORD: password
+    volumes:
+      - outline-db-data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:alpine
+    volumes:
+      - redis-data:/data
+
+volumes:
+  outline-db-data:
+  redis-data:
+</code></pre>
+<h4 id="step-3-generate-a-secret-key">Step 3: Generate a Secret Key</h4>
+<p>Replace the <code>your-random-secret-key</code> in the <code>SECRET_KEY</code> field with a secure key. You can generate one using this command:</p>
+<pre><code class="language-bash">openssl rand -hex 32
+</code></pre>
+<h4 id="step-4-start-the-containers">Step 4: Start the Containers</h4>
+<p>Navigate to the directory where your <code>docker-compose.yml</code> file is stored, and run the following command to bring up the entire stack:</p>
+<pre><code class="language-bash">docker-compose up -d
+</code></pre>
+<p>This will start Outline along with PostgreSQL and Redis.</p>
+<h4 id="step-5-set-up-a-reverse-proxy-optional-but-recommended">Step 5: Set Up a Reverse Proxy (Optional, but Recommended)</h4>
+<p>If you’re using a domain and want to serve Outline over <strong>HTTPS</strong>, you’ll need a reverse proxy like <strong>NGINX</strong>. Here's an example configuration for NGINX:</p>
+<pre><code>server {
+    listen 80;
+    server_name your-domain.com;
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+</code></pre>
+<p>You can also set up <strong>Let’s Encrypt</strong> for automatic HTTPS certificates.</p>
+<h4 id="step-6-set-up-backups-for-postgresql">Step 6: Set Up Backups for PostgreSQL</h4>
+<p>Once the stack is running, you can set up automated backups for PostgreSQL. Here’s a basic cron job for backing up your database:</p>
+<ol>
+<li>Create a backup script <code>backup.sh</code>:</li>
+</ol>
+<pre><code class="language-bash">#!/bin/bash
+
+DATE=$(date +&quot;%Y%m%d%H%M&quot;)
+BACKUP_DIR=&quot;/path-to-backups&quot;
+DB_CONTAINER_NAME=&quot;your-db-container-name&quot;
+
+docker exec $DB_CONTAINER_NAME pg_dump -U outline outline &gt; $BACKUP_DIR/outline_backup_$DATE.sql
+</code></pre>
+<ol>
+<li>Set up a cron job to run this script periodically:</li>
+</ol>
+<pre><code class="language-bash">crontab -e
+</code></pre>
+<p>Add this line to back up the database every day at 2 AM:</p>
+<pre><code class="language-bash">0 2 * * * /path-to-script/backup.sh
+</code></pre>
+<h3 id="2-kubernetes-if-youre-using-it">2. Kubernetes (If You're Using It)</h3>
+<p>If you already have a Kubernetes cluster, you can deploy Outline using <strong>Helm</strong> or custom Kubernetes manifests. Here’s a high-level overview:</p>
+<ol>
+<li><strong>Create a Kubernetes Deployment and Service for Outline</strong>.</li>
+<li>Set up <strong>Persistent Volume Claims</strong> for PostgreSQL and Redis to ensure data persistence.</li>
+<li>Configure <strong>Ingress</strong> for routing traffic, including setting up HTTPS with <strong>cert-manager</strong>.</li>
+</ol>
+<h3 id="3-other-hosting-options-with-vps">3. Other Hosting Options (With VPS)</h3>
+<p>If Docker is not preferred, you can also run the Outline stack manually on a Virtual Private Server (VPS) using services like DigitalOcean, AWS, or Linode.</p>
+<ul>
+<li><strong>PostgreSQL and Redis</strong>: You can manually install and configure these services on your VPS.</li>
+<li><strong>Nginx or Apache</strong>: Set up a web server to handle traffic routing, including SSL certificates.</li>
+<li><strong>Systemd</strong>: Configure Outline as a systemd service to ensure it runs on startup and is manageable with system commands.</li>
+</ul>
+<h3 id="4-managed-vps-services-with-deployment-options">4. Managed VPS Services with Deployment Options</h3>
+<p>Some VPS services, like <strong>DigitalOcean</strong>, provide <strong>1-click Docker apps</strong> or managed databases for simpler setup. While this gives you less control over the database management, it simplifies deployment, and you can focus more on Outline’s functionality.</p>
+<h3 id="summary-of-easy-options">Summary of Easy Options:</h3>
+<ol>
+<li><strong>Docker Compose</strong>: Easiest way to deploy Outline on your own infrastructure.</li>
+<li><strong>Kubernetes</strong>: Great for more scalable or complex environments, especially if you're familiar with container orchestration.</li>
+<li><strong>Manual VPS Setup</strong>: More control but requires manual management of services like PostgreSQL and Redis.</li>
+</ol>
+<p>Let me know if you'd like any further details on any of these methods or if you need help with specific setup steps!</p>
+<hr />
+<p>The above text was generated by a large language model (LLM) and its accuracy has not been validated. This page is part of 'LLMs-on-LLMs,' a Github repository by Daniel Rosehill which explores how curious humans can use LLMs to better their understanding of LLMs and AI. However, the information should not be regarded as authoritative and given the fast pace of evolution in LLM technology will eventually become deprecated. </p>
+<h2 id="this-footer-was-added-at-15-11-2024">This footer was added at 15-11-2024.</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
