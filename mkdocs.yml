@@ -1,0 +1,8 @@
+site_name: "LLMs on LLMs"
+theme:
+  name: material
+
+# Optional: Automatically generate navigation
+plugins:
+  - gen_nav:
+      enabled: true
