@@ -1,0 +1,48 @@
+# Prompt
+
+ChatGPT Plus is currently priced at $20 per month.
+
+I'd be interested to compare the cost-effectiveness of the web UI and using GPT 4o via the API.
+
+Specifically - how many outputs one can generate for $20 (at which point, the API will become more expensive, of course).
+
+Given that the API usage is priced based upon input and output tokens used, use the following assumptions:
+
+- Average input token usage = 90
+- Average output token usage = 1100
+
+Calculate how many outputs could be generated per day at the point at which the API costs and subscription costs would reach equivalence
+
+# Output
+
+You asked for a comparison between the cost-effectiveness of using ChatGPT Plus ($20/month) via the web UI and using GPT-4 via the API, based on token usage. Specifically, you want to know how many outputs can be generated per day at the point where API costs and subscription costs are equivalent.
+
+### Assumptions:
+
+- **Average input tokens per query**: 90
+- **Average output tokens per query**: 1100
+- **API cost per token**: $0.0004 (for both input and output tokens)
+- **ChatGPT Plus subscription**: $20 per month
+
+### Step-by-Step Calculation:
+
+1. **Cost per output via API**:
+   - **Input token cost**: $$90 \times 0.0004 = 0.036$$ USD
+   - **Output token cost**: $$1100 \times 0.0004 = 0.44$$ USD
+   - **Total cost per output**: $$0.036 + 0.44 = 0.476$$ USD
+2. **Number of outputs for $20 via API**:
+   - For $20, the number of outputs you can generate is:
+   ```math
+   \text{Outputs per month} = \frac{20}{0.476} \approx 42.02
+   ```
+3. **Number of outputs per day**:
+   - Assuming a 30-day month, the number of outputs you can generate per day is:
+   ```math
+   \text{Outputs per day} = \frac{42.02}{30} \approx 1.40
+   ```
+
+### Conclusion:
+
+At the point where API costs match the $20 ChatGPT Plus subscription, you would be able to generate approximately **1.4 outputs per day** using the API under the given assumptions. Beyond this point, using the API would become more expensive than the web-based subscription model.
+
+This means that if your usage exceeds around **1-2 outputs per day**, the ChatGPT Plus subscription is more cost-effective than using GPT-4 via the API.
