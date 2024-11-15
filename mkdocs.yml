@@ -4,5 +4,4 @@ theme:
 
 # Optional: Automatically generate navigation
 plugins:
-  - gen_nav:
-      enabled: true
+  - awesome-pages:
