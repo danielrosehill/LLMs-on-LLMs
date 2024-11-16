@@ -65,3 +65,9 @@ For extracting facts and figures from a corporate sustainability report while li
 Costs will vary depending on the model used but expect to pay between **$2 to $6** per document based on token usage and model selection.
 
 &#x20;
+
+
+
+
+
+

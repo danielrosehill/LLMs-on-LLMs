@@ -70,3 +70,9 @@ Prompts/Autocapture/Extract prompts using a script - Obsidian.md#Prompt 1
 ## Extracted Prompts
 
 Prompts/Extract prompts using a script - Obsidian.md#Prompt 1
+
+
+
+
+
+

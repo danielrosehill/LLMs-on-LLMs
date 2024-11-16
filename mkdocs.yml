@@ -1,8 +1,13 @@
 site_name: LLMs on LLMs
 theme:
-  name: material  # Optional: You can choose other themes like 'readthedocs'
+  name: material 
 nav:
   - Home: index.md
 plugins:
   - gen_nav:
-      enabled: true  
+      enabled: true
+  - search
+ 
+
+not_in_nav: |
+  images/

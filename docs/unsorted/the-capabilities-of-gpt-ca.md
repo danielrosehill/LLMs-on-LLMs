@@ -33,3 +33,9 @@ Response: "While ChatGPT is designed to be neutral, it may still reflect biases 
 Response: "ChatGPT can provide information and assist in certain tasks, but it doesn’t have the expertise or certification of professionals. It’s best to rely on trained professionals for specialized advice."
 
 These responses help clarify the capabilities and limitations of ChatGPT, addressing common misunderstandings while ensuring users have a realistic perspective on the tool’s functions.
+
+
+
+
+
+

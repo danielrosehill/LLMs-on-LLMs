@@ -19,3 +19,8 @@ COT
 Reasoning prompts
 
 Order the list alphabatically according to the technique
+
+
+
+
+

@@ -39,3 +39,9 @@ For your specific hardware:
 The laptop's 16GB RAM should be sufficient to run most 7B parameter models comfortably, though you may want to close other memory-intensive applications while using the LLMs\[2].
 
 &#x20;
+
+
+
+
+
+

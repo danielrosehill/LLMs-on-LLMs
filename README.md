@@ -2,7 +2,7 @@
 
 ## "If they can create pizza recipes and write emails, they can explain how they're made, right?"
 
-![alt text](images/header.webp)
+![alt text](repo-files/images/header.webp)
 
  Large language models (LLMs) are fast-evolving tools with incredible capabilities that are fast revolutionising how humans interface with technology.
 

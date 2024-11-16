@@ -21,3 +21,9 @@ For 4,000 notes:
 - **Parallel Processing**: If your VM has multiple cores, you could parse and process notes in parallel, reducing overall processing time significantly.
 
 In short, with minimal NLP and a straightforward insertion structure, the initial ingestion for 4,000 notes should be manageable within **5-30 minutes** on a moderately powerful VM.
+
+
+
+
+
+

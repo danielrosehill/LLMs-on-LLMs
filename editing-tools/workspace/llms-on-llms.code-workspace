@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}${appName}${separator}[Branch: published]",
+		"favorites.resources": [
+			{
+				"filePath": "scripts/mk-docs/mkdocs-pages.py",
+				"group": "Default"
+			},
+			{
+				"filePath": "docs/index.md",
+				"group": "Default"
+			},
+			{
+				"filePath": "netlify.toml",
+				"group": "Default"
+			}
+		]
+	}
+}

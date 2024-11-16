@@ -56,3 +56,9 @@ Here’s how you could set up a basic prototype:
 This setup will allow you to build a fully local RAG system that operates offline on OpenSUSE.
 
 &#x20;
+
+
+
+
+
+
