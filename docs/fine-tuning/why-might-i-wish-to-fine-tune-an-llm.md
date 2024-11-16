@@ -1,8 +1,12 @@
-# Prompt
+# Give me 20 reasons I might wish to fine-tune an LLM
 
-Let's say that I wanted to fine tune my own LLM for a specific purpose. Firstly, can you think of 20 credible purposes I might have based on what you know about me
+## Generation Details
 
-# Output
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
 
 Here are 20 credible purposes for fine-tuning your own large language model (LLM), based on your background, interests, and previous projects:
 

@@ -1,5 +1,13 @@
 # Vector Databases: A Primer for Business Leaders
 
+## Generation Details
+
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
+
 ## Executive Summary
 
 Vector databases have emerged as a critical component in the modern AI and machine learning ecosystem, particularly in the realm of Large Language Models (LLMs) and advanced search technologies. This primer provides business leaders with a comprehensive understanding of vector databases, their importance, applications, and implications for business strategy.

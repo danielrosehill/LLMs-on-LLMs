@@ -1,9 +1,13 @@
-# Prompt
+# I'd love to have a go at fine-tuning an LLM. How hard is it?
 
-Write me another guide. I'd love to fine tune an LLM for my own use. Would this be difficult? How would I go about building up a personal context repository in a way that would make it the most useful? I'm a rookie. Do you think this is too hard?
+## Generation Details
 
-# Output
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
 
+---
+ 
 You're right to consider fine-tuning! It's a powerful way to personalize LLMs for your specific needs. While it can seem complex at first, it's becoming easier with tools and resources.
 
 Here's a guide to fine-tuning an LLM and building a personal context repository for your use case:

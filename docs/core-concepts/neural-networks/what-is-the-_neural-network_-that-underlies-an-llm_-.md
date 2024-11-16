@@ -1,3 +1,13 @@
+# Explain what 'neutral networks' mean in the context of LLMs ... and how they work?
+
+## Generation Details
+
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
+
 You asked how the core of a Large Language Model (LLM), which is a **neural network**, works. Here's a simplified explanation:
 
 At its core, an LLM is built on a **neural network**, which is a system designed to mimic how the human brain processes information. The neural network consists of layers of interconnected nodes, known as **neurons**. These neurons are organized into three main types of layers:

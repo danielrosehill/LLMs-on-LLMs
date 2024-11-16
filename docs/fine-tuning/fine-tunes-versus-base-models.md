@@ -1,8 +1,12 @@
-# Prompt
+# How significantly can fine-tuned models differ from the models they were derived from?
 
-I'd be interested in learning more about fine tuned LLM models. In this Human Eval comparison paper we can see a lot of what look liked fine tuned variants of GPT-4. How significantly can these vary from the base models?
+## Generation Details
 
-# Output
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
 
 Based on the information provided in the image and the additional context from the search results, I can offer some insights on fine-tuned LLM models and their performance compared to base models:
 

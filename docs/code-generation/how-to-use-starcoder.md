@@ -1,3 +1,13 @@
+# How can I get going using StarCoder to create Python GUIs?
+
+## Generation Details
+
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
+
 StarCoder is indeed a powerful large language model (LLM) designed for generating code. It is capable of converting natural language descriptions into Python programs, making it suitable for tasks like generating Python GUIs. StarCoder is available through Hugging Face, and you can run it locally on your machine, including on Fedora.
 
 ## Setting Up StarCoder Locally on Fedora

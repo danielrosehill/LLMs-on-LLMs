@@ -1,8 +1,12 @@
-# Prompt
+# Are any LLM APIs particularly effective for bulk usage?
 
-Is there any LLM API that is particularly cost effective for bulk prompting?
+## Generation Details
 
-# Output
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
 
 Based on the information provided in the search results and your question about cost-effective LLM APIs for bulk prompting, here are some insights:
 

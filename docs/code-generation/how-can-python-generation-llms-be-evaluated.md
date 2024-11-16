@@ -1,8 +1,12 @@
-# Prompt
+ # What are some objective ways LLMs can be compared and evaluated for generating compliant Python?
 
-I think I asked you this before, but I'd be very interested in knowing whether there have been any benchmarks that objectively sought to compare the capabilities of different LLMs in generating Python from natural language descriptions? I've you're not aware of any surveys, can you instead point me to opinions?
+## Generation Details
 
-# Output
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
 
 Based on the search results and available information, there have indeed been several benchmarks and studies that have compared the capabilities of different LLMs in generating Python code from natural language descriptions. Here are some key points:
 

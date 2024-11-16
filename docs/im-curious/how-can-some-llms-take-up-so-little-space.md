@@ -1,8 +1,24 @@
-# Prompt
+# How can LLMs take up so little space on a computer?
 
-How are tools like ChatGPT seemingly able to retrieve and summarise all human knowledge in existence? I think this is the reason why I find the idea that any effective LLM could be compacted into a few GB of storage hard to believe. How does that offer enough space for all the knowledge they must have?
+## Generation Details
 
-# Output
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
+
+## Edited version of my prompt
+
+I download local LLMs on LM Studio.
+
+Some are only about 6GB in size. But they can response to questions drawing on what seems like an almost infinite bank of knowledge. 
+
+How is this possible?
+
+---
+
+## How LLM information retrieval really works...
 
 It’s a fascinating question that touches on the core mechanics of how Large Language Models (LLMs) like ChatGPT function. The ability of these models to retrieve and summarize vast amounts of information without requiring terabytes of storage is indeed remarkable. Here’s how it works:
 

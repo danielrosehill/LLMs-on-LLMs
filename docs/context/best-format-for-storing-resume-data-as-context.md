@@ -1,8 +1,12 @@
-# Prompt
+# Which format do you think is the best for storing your resume as contextual data for use with LLMs?
 
-You've converted my resume, which was a PDF, into an optimised markdown file and into JSON. As I explained, the purpose of the exercise was to store the data as context so that I can use it in future prompting (so that I don't need to explain what I do and where I work every time). Which format is more useful for this purpose? If none of them, can you suggest a better format?
+## Generation Details
 
-# Output
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
 
 For the purpose of storing and referencing your resume information for future prompting, the **Markdown** format is generally more useful because it is human-readable and structured in a simple and clear way, making it easier to quickly interpret and modify if needed. It also works well in most text-based environments, including those for AI models like ChatGPT.
 

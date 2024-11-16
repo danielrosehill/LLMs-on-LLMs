@@ -1,8 +1,18 @@
-# Prompt
+# Are there collections of prompts and outputs out there?
 
-Are there already datasets like this in existence (large collections of LLM outputs)?
+## Generation Details
 
-# Output
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
+
+## Prompt
+
+As an experiment, I'm gathering some of my prompts and outputs and saving them. As time goes on, I'm developing quite a collection. This made me wonder: are there other collections of prompts and outputs out there? Do any purport to reflect the state of LLM development at a given time?
+
+## Open source LLM output datasets
 
 There are several existing **open-source datasets of LLM outputs** or LLM-generated dialogues that could serve as examples for open-sourcing your own collection. These datasets typically focus on conversations, prompts, and responses that are designed to help train or fine-tune language models. Here are a few examples:
 

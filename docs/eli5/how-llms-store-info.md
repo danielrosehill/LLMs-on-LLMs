@@ -1,6 +1,24 @@
-yes but explain wheth foundational knowledge is stored within the download file. If I ask it what color is the sky usyuallg and it says blue where is that knowkreg coming from
+# How do LLMs "store" info?
 
-When you use a fully offline large language model (LLM) and ask it a question such as "What color is the sky usually?" and it responds with "blue," the knowledge it draws upon is not stored as raw facts or specific sentences, but rather as patterns learned during its training. Here's how that works:
+## Prompt
+
+Let's say that I download a local LLM and ask it something like:
+
+*"What color is the sky?"*
+
+It will tell me something like:
+
+*"The sky is blue"*
+
+Where is this information actually "coming" from?
+
+## Generation Details
+
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
 
 ### How Knowledge is Stored in an LLM
 

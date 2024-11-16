@@ -1,8 +1,12 @@
-# Prompt
+# Emerging code-gen LLMs
 
-I know that your historical context is limited, but can you provide some information about emerging LLMs for programming that were being discussed when your knowledge was last updated?
+## Generation Details
 
-# Output
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
 
 Based on my knowledge cutoff in 2024, there were several emerging LLMs for programming that were gaining attention in the AI and developer communities:
 

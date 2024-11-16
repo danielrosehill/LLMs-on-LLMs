@@ -1,8 +1,4 @@
-# Prompt
-
-I can upload images to LLMs and they can analyse them. What is this technology called and is it a stack of processes that's required to make it work?
-
-# Output
+# How LLMs analyse images
 
 The technology that allows you to upload images to large language models (LLMs) and have them analyze those images is called **Multimodal Large Language Models (Multimodal LLMs)**. These models are designed to process and interpret multiple types of data inputs, such as text, images, audio, and even video. By integrating both visual and textual data, multimodal LLMs can generate more contextually rich and accurate outputs compared to traditional text-only models.
 

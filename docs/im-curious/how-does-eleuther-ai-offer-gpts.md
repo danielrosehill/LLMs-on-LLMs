@@ -1,6 +1,20 @@
+# How does EleutherAI open-source GPT models?
+
+## Generation Details
+
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
+
 # Prompt
 
-The Eleuther models are interesting. I thought that only OpenAI made the GPT models though?
+I see that Eleuther (AI) open-sources some GPTs.
+
+I thought that GPTs specifically were an OpenAI invention?
+
+---
 
 # Output
 

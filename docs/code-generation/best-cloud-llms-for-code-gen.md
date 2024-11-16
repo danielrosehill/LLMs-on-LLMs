@@ -1,3 +1,13 @@
+# What are some cloud LLMs that can generate Python?
+
+## Generation Details
+
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
+
 If you're specifically looking for cloud-based LLMs that can generate Python scripts, here are some of the top options:
 
 ### 1. CodeLlama - Python (Meta)

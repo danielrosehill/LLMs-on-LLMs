@@ -1,4 +1,22 @@
-I find that ChatGPT consistently offers better software recommendations than what I can find searching on Google. What's the secret to your magic? (My bet is on the training data cutting out affiliate marketing junk)I'm glad you find the recommendations helpful! You're not too far off with your guess—it really boils down to a combination of factors that aim to give you useful, unbiased insights:
+# How does ChatGPT seem to often produce better software recommendations than searching on Google?
+
+## Generation Details
+
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
+
+## Prompt
+
+I find that ChatGPT consistently offers better software recommendations than what I can find searching on Google. What's the secret to your magic? (My bet is on the training data cutting out affiliate marketing junk)
+
+---
+
+## Output
+
+I'm glad you find the recommendations helpful! You're not too far off with your guess—it really boils down to a combination of factors that aim to give you useful, unbiased insights:
 
 ### 1. Training Data Diversity
 

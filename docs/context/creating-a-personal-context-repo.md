@@ -8,7 +8,13 @@ As I'm working with a lot of different LLMs and accessing them via different mea
 
 What do you think of this idea? Are there any frameworks that exist for this purpose already? If not, can you think of how I might best structure and implement my custom contextual library for LLM work?
 
-# Output
+## Generation Details
+
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
 
 The idea of creating a context repository for LLM interactions is excellent and can significantly streamline your workflow. It's particularly useful for complex, ongoing projects like your "Output Hub" system. Here's my analysis of your idea and some suggestions for implementation:
 

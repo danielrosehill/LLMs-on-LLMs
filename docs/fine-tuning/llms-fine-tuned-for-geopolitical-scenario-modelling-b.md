@@ -1,8 +1,12 @@
-# Prompt
+# Has an LLM been devised or fine-tuned specifically for the purpose of simulating geopolitical scenarios?
 
-Have any LLMs been developed or fine tuned to focus on geopolitical scenario modelling?
+## Generation Details
 
-# Output
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
 
 While large language models (LLMs) like GPT-4 are general-purpose models, there have been efforts in fine-tuning or adapting LLMs specifically for geopolitical scenario modeling and analysis. These models are often used in academia, think tanks, and government institutions to simulate political events, forecast geopolitical risks, and evaluate potential future outcomes. However, a few specific projects have emerged that are focused on this niche.
 

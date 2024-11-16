@@ -2,29 +2,25 @@
 
 ## "If they can create pizza recipes and write emails, they can explain how they're made, right?"
 
+## Available As A Website
+
+[![Website](https://img.shields.io/badge/Website-Visit%20Now-blue?style=for-the-badge)](https://llms.bydanielrosehill.com/)
+
+---
+
 ![alt text](repo-files/images/header.webp)
 
  Large language models (LLMs) are fast-evolving tools with incredible capabilities that are fast revolutionising how humans interface with technology.
 
  LLMs excel in research, gathering sources, and summarising complex topics.
 
-This made me wonder (maybe you had the same thought!):
+ So once I wondered:
 
-*If that's the case ... can you ask LLMs to explain how THEY work!?*
+ *"If they can create pizza recipes and write emails, they can explain how they're made, right?*
 
 I've been keeping a record of my prompts and outputs since the summer - the slowly evolving archive is at [DanielGoesPrompting.com](https://danielgoesprompting.com)
 
 I'll use this repository to gather and share those related to LLMs themselves.
-
----
-
-### Outputs Index
-
-Outputs are gathered in `outputs` (`prompts` records the prompts I used to generate them).
-
-The `index.md` is intended to provide an index. Once I figure out how to generate it programatically it will be complete. Until then, it will lag behind the files.
-
-- [Index](https://github.com/danielrosehill/LLMs-on-LLMs/blob/main/outputs/index.md)
 
 ---
 

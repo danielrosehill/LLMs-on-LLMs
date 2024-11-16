@@ -1,3 +1,13 @@
+# Summarise the hardware that has been developed to date for the primary purpose of running LLMs?
+
+## Generation Details
+
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
+
 Based on the search results, there have been some developments in hardware specifically designed for running LLM workloads, particularly at smaller scales:
 
 1. ESP32 for small-scale LLMs:

@@ -1,3 +1,13 @@
+# Explain what 'inference' means in the context of LLMs?
+
+## Generation Details
+
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
+
 **LLM inference** refers to the process by which a large language model (LLM) generates a response or prediction based on an input prompt, utilizing the knowledge it has learned during its training. Inference is a critical stage in the deployment of LLMs, as it is the step where the model applies its learned patterns to produce meaningful outputs.
 
 ### How LLM Inference Works

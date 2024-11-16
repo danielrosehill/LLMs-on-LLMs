@@ -1,3 +1,13 @@
+# How have LLMs been evolving in Asia?
+
+## Generation Details
+
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
+
 Your query was: "Please provide an outline of the main LLMs developed to date by Asian companies and researchers."
 
 Based on the information gathered, I have generated a table that outlines the main large language models (LLMs) developed by Asian companies and researchers. You can reference this table for details about the models, their developers, capabilities, and notable applications.

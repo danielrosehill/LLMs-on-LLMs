@@ -1,8 +1,18 @@
+# How might a user go about building out their own context repository for working with LLM?
+
+## Generation Details
+
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
+
 # Prompt
 
 Can you suggest any ways in which a user might go about developing a personal context for LLM usage that wouldn't only be useful in Lang Chain but which might be able to be easily imported into different LLMs. I'm thinking about something like setting up a structured store of data reflecting personal projects, code preferences, etc.
 
-# Output
+---
 
 Based on your query and the search results, I can suggest several approaches for developing a personal context for LLM usage that could be versatile and easily importable into different LLMs, not just limited to LangChain. Here are some strategies:
 

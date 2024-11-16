@@ -1,8 +1,24 @@
+# Are LLMs' inherently America-centric? And does that pose a challenge to their global adoption?
+
+## Generation Details
+
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
+
 # Prompt
 
-Here's an argument. Do you agree or disagree? Explain your reasons:
+Here's an argument. 
 
-- Most major LLMs, having been developed in the US, reflect a decidedly American-centric worldview. This is a major barrier to LLMs having global applicability.
+Do you agree or disagree? Explain your reasons either way:
+
+- Most major LLMs, having been developed in the US, reflect a decidedly American-centric worldview. 
+  
+Thesis two:
+
+- This is a major barrier to LLMs having global applicability.
 
 # Output
 

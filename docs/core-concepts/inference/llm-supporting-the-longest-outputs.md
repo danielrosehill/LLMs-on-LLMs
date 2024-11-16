@@ -1,3 +1,13 @@
+# Which LLMs can support the longest outputs, currently?
+
+## Generation Details
+
+| Date       | LLM        | Access Method |
+|------------|------------|---------------|
+| Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
+
+---
+
 Large Language Models (LLMs) vary in their ability to generate long outputs, depending on their architecture, training, and fine-tuning. The models that support the longest outputs typically have undergone specialized training or utilize advanced techniques to handle extended context windows. Here are some of the LLMs known for supporting the longest outputs:
 
 ### 1. LongWriter
