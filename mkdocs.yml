@@ -1,7 +1,8 @@
-site_name: "LLMs on LLMs"
+site_name: LLMs on LLMs
 theme:
-  name: material
-
-# Optional: Automatically generate navigation
+  name: material  # Optional: You can choose other themes like 'readthedocs'
+nav:
+  - Home: index.md
 plugins:
-  - awesome-pages:
+  - gen_nav:
+      enabled: true  
