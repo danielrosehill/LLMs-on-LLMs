@@ -1,5 +1,5 @@
 {
-    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}${appName}${separator}[Branch: published]",
+    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}${appName}${separator}[Branch: drafting]",
     "favorites.resources": [
         {
             "filePath": "scripts/mk-docs/mkdocs-pages.py",
