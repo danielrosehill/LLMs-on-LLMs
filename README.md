@@ -1,5 +1,7 @@
 # LLMs ... on LLMs
 
+[![View on GitHub](https://img.shields.io/badge/View%20on-GitHub-181717?logo=github&logoColor=white)](ttps://github.com/danielrosehill/LLMs-on-LLMs)
+
 ## *"I mean, If they can create pizza recipes and write emails, they can explain how they're made, right?"*
 
 ![alt text](images/header.webp)
