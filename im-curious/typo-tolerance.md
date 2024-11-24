@@ -10,7 +10,7 @@ LLMs seem extremely tolerant of typos, more so than Google. Is this just my perc
 
 ![Written By GPT 4o](https://img.shields.io/badge/Written%20By-GPT%204o-blue?style=for-the-badge)
 
-Generated: 24-Nov-24
+*Generated: 24-Nov-24*
 
 Yes, your perception is accurate—Large Language Models (LLMs) like GPT-4 are significantly more tolerant of typos compared to traditional search engines like Google. This robustness stems from several key factors related to their architecture, training data, and tokenization methods.
 
