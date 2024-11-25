@@ -2,19 +2,13 @@
 
 ## Prompt (Approximately)
 
-The context window is an important concept to understanding the current state and limitations of LLMs.
-
-Generate a document intended for business leaders explaining the technical reasons for the issue in language they'll be likely to understand.
-
----
+> The context window is an important concept to understanding the current state and limitations of LLMs. Generate a document intended for business leaders explaining the technical reasons for the issue in language they'll be likely to understand.
 
 ## Generation Details
 
 | Date       | LLM        | Access Method |
 |------------|------------|---------------|
 | Nov 2024 | ![GPT-4](https://img.shields.io/badge/GPT--4-412991?style=for-the-badge&logo=openai&logoColor=white) |  Web UI |
-
----
 
 ## Executive Summary
 

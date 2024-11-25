@@ -1,12 +1,6 @@
 # Prompt
 
-When I prompt LLMs I frequently need to provide the same set of details to provide context.
-
-A good example is the "Output Hub" system  that we're discussing which I'm working on. It's a system for saving prompts and outputs into a knowledge base type tool that humans can then edit and improve upon.
-
-As I'm working with a lot of different LLMs and accessing them via different means, I'm beginning to find that I need some kind of context repository. My idea is that I'll have files with contexts for key projects that I can copy and paste when required into an LLM (as many web UIs allow users to do this).
-
-What do you think of this idea? Are there any frameworks that exist for this purpose already? If not, can you think of how I might best structure and implement my custom contextual library for LLM work?
+> When I prompt LLMs I frequently need to provide the same set of details to provide context. A good example is the "Output Hub" system  that we're discussing which I'm working on. It's a system for saving prompts and outputs into a knowledge base type tool that humans can then edit and improve upon. As I'm working with a lot of different LLMs and accessing them via different means, I'm beginning to find that I need some kind of context repository. My idea is that I'll have files with contexts for key projects that I can copy and paste when required into an LLM (as many web UIs allow users to do this). What do you think of this idea? Are there any frameworks that exist for this purpose already? If not, can you think of how I might best structure and implement my custom contextual library for LLM work?
 
 ## Generation Details
 

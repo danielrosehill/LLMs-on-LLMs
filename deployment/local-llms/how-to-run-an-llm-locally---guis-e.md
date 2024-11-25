@@ -1,7 +1,3 @@
-# Prompt
-
-# Output
-
 Yes, there are several ways to use local LLMs with a graphical user interface (GUI). Based on the information provided and my knowledge, here are some popular options:
 
 1. Ollama with Open Web UI

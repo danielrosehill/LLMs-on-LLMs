@@ -1,6 +1,6 @@
 # Prompt
 
-You mentioned Poe by Quora. I would be interested in learning about more tools and services that allow customers to access multiple AI models. Can you think of some other major ones?
+> I would be interested in learning about more tools and services that allow customers to access multiple AI models. Can you think of some other major ones?
 
 # Output
 

@@ -1,6 +1,6 @@
 # Prompt
 
-Please provide a briefing document for business leaders. Your purpose is to explain how tokenisation works in LLMs. Please cover important topics like input and output token constraints and how different token limits may produce very different user experiences when interfacing with LLMs
+> Provide a briefing document for business leaders. Your purpose is to explain how tokenisation works in LLMs. Please cover important topics like input and output token constraints and how different token limits may produce very different user experiences when interfacing with LLMs
 
 # Output
 

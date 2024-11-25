@@ -1,6 +1,6 @@
 # Prompt
 
-Could you help me to create a GUI which I will use to generate software specs with. I'd like to create a simple Python GUI which I can use on Fedora Linux. The GUI would allow me to have a conversation with ChatGPT (via the API) designed to help me generate a software spec. I would like the interaction to be fixed in the sense that I can define some questions GPT must ask me. Is it possible to create an interactive GPT app that can run locally via the API in the mannner I'm describing? So far I've only done local GPT apps that ask for one prompt and then give an output. Is there a term for this more interactive model?
+> I'd like to create a simple Python GUI which I can use on Fedora Linux. The GUI would allow me to have a conversation with ChatGPT (via the API) designed to help me generate a software spec. I would like the interaction to be fixed in the sense that I can define some questions GPT must ask me. Is it possible to create an interactive GPT app that can run locally via the API in the mannner I'm describing? So far I've only done local GPT apps that ask for one prompt and then give an output. Is there a term for this more interactive model?
 
 # Output
 

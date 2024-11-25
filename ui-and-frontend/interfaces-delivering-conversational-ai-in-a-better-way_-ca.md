@@ -1,6 +1,6 @@
 # Prompt
 
-I mentioned that I have found a few deficiencies in the way in which many conversational LLMs can be used. One of them is that many platforms do not allow users to save outputs to their own storage platforms (like Google Drive or S3 buckets). A second is that in many interfaces chats are not robustly indexed and not easy to search through. Are there any platforms that have really focused on providing better output management and storage?
+> I mentioned that I have found a few deficiencies in the way in which many conversational LLMs can be used. One of them is that many platforms do not allow users to save outputs to their own storage platforms (like Google Drive or S3 buckets). A second is that in many interfaces chats are not robustly indexed and not easy to search through. Are there any platforms that have really focused on providing better output management and storage?
 
 # Output
 

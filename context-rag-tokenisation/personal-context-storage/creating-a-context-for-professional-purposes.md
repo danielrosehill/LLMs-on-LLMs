@@ -1,6 +1,6 @@
 # Prompt
 
-I'd like to use LLMs to suggest ways in which I could perform more effectively at work. Something I've been looking into is creating a repository of files whose purpose is providing key chunks of context for LLMs. Can you suggest how I might go about building up a context repository for this specific purpose?
+> I'd like to use LLMs to suggest ways in which I could perform more effectively at work. Something I've been looking into is creating a repository of files whose purpose is providing key chunks of context for LLMs. Can you suggest how I might go about building up a context repository for this specific purpose?
 
 # Output
 

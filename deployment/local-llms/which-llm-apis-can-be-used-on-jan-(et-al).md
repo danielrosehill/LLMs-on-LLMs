@@ -1,8 +1,6 @@
-![5ba4783c-7fef-427f-b7b6-66354487cdd5.png](files/33ae01b7-3b2e-41aa-99f8-5022da0d1e31/5ba4783c-7fef-427f-b7b6-66354487cdd5.png)
+ # Prompt
 
-# Prompt
-
-This chart shows some LLM APIs. For each, please state whether it can be accessed by a third party chat frontend like Jan (or others).
+> This chart shows some LLM APIs. For each, please state whether it can be accessed by a third party chat frontend like Jan (or others).
 
 # Output
 

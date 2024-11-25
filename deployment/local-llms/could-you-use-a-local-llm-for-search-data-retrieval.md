@@ -1,6 +1,6 @@
 # Prompt
 
-What about a more advanced approach. Is it possible to use a local LLM for search? For instance, the LLM could look through my vault and try to find the right file for me?
+ > Is it possible to use a local LLM for search? For instance, the LLM could look through my vault and try to find the right file for me?
 
 # Output
 

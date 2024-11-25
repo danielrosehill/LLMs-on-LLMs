@@ -10,7 +10,7 @@
 
 # Prompt
 
-Can you suggest any ways in which a user might go about developing a personal context for LLM usage that wouldn't only be useful in Lang Chain but which might be able to be easily imported into different LLMs. I'm thinking about something like setting up a structured store of data reflecting personal projects, code preferences, etc.
+> Can you suggest any ways in which a user might go about developing a personal context for LLM usage that wouldn't only be useful in Lang Chain but which might be able to be easily imported into different LLMs. I'm thinking about something like setting up a structured store of data reflecting personal projects, code preferences, etc.
 
 ---
 

@@ -1,6 +1,6 @@
 # Prompt
 
-What are the major RAGs and are there any open source RAGs?
+> What are the major RAGs and are there any open source RAGs?
 
 # Output
 

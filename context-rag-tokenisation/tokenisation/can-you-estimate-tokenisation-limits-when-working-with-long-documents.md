@@ -1,6 +1,6 @@
 # Prompt
 
-Is there any reliable way of calculating where the token limits might fall within a sample document? Let's say that I wanted to use a PDF with GPT 4o Turbo. I might want to know exactly where the token limit "hits" in the text so to speak. Are there any reliable tools for estimating this?
+> Is there any reliable way of calculating where the token limits might fall within a sample document? Let's say that I wanted to use a PDF with GPT 4o Turbo. I might want to know exactly where the token limit "hits" in the text so to speak. Are there any reliable tools for estimating this?
 
 # Output
 

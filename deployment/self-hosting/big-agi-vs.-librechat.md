@@ -1,6 +1,6 @@
 # Prompt
 
-How does Big AGI compare to LibreChat in terms of maturity? Does it support storing conversations in custom storage? Are there any other self-hostable solutions like this? Note: by "self-hostable" I mean that it can be self-hosted on a web server to deliver a managed web UI (and not on a desktop environment)
+> How does Big AGI compare to LibreChat in terms of maturity? Does it support storing conversations in custom storage? Are there any other self-hostable solutions like this? Note: by "self-hostable" I mean that it can be self-hosted on a web server to deliver a managed web UI (and not on a desktop environment)
 
 # Output
 

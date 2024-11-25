@@ -8,7 +8,7 @@
 
 ## Prompt
 
-Can you think of existing technologies which might be suitable for the purpose of creating a prototype contextual repository for the purpose of enhancing LLM interactions and providing this kind of functionality? Perhaps ultimately this would need to be custom developed. But what are some currently available technologies that could perhaps be repurposed for this. Think widely and creatively.
+>Can you think of existing technologies which might be suitable for the purpose of creating a prototype contextual repository for the purpose of enhancing LLM interactions and providing this kind of functionality? Perhaps ultimately this would need to be custom developed. But what are some currently available technologies that could perhaps be repurposed for this. Think widely and creatively.
 
 ---
  

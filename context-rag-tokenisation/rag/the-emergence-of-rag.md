@@ -1,6 +1,6 @@
 # Prompt
 
-Excellent work. Please now provide a summary of the evolution of RAG to date. When the concept emerged. Notable developments and technologies so far. A timeline. A matrix. This format is great
+> Provide a summary of the evolution of RAG to date. When did the concept emerge and what have been some notable developments to date.
 
 # Output
 

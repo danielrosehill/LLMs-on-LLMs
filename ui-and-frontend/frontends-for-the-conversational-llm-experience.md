@@ -1,8 +1,6 @@
 # Prompt
 
-Very interesting. It sounds like options are actually very limited. Using things like APIs and Lang Hub seems like one way of doing this (being able to automatically capture outputs into your database or business systems). Or building custom solutions. But if you want to still take advantage of the ease of a conversational interface with the LLM .... I'm not sure what you'd do.
-
-Are there any frameworks or tools which specifically focus on providing the conversational frontends to existing LLMs and do that via API integration. It seems to me that this would be one approach to get the kind of system I'm looking for developed.
+> Are there any frameworks or tools which specifically focus on providing the conversational frontends to existing LLMs and do that via API integration?
 
 # Output
 

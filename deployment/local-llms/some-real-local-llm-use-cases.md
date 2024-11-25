@@ -1,6 +1,6 @@
 # Prompt
 
-Haha. Let's get back to serious stuff. I'm actually very curious about the idea of building a local LLM. It's way out of my budget. But are there businesses who have built systems of this nature? The dimensions you provided aren't as big as I would have imagined
+> Are there businesses which have developed local LLMs just for their own use?
 
 # Output
 
