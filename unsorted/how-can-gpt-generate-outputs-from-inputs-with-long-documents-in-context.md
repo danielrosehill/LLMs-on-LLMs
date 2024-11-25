@@ -1,6 +1,6 @@
 # Prompt
 
-Earlier I provided my home inventory to you (ChatGPT) in order to ask you to try to identify some surplus things I might be holding onto. In previous interactions I've provided an entire book in PDF form (about 300 pages) in order to receive a list of specific mentions in the book. In all these cases, I've received what seemed like reliable outputs from GPT that showed that the context was processed in full. But now you're mentioning tokenisation as being a limit. Were the previous generations hallucinations? If not, how was GPT able to process an "input" with so many tokens?
+> Earlier I provided my home inventory to you (ChatGPT) in order to ask you to try to identify some surplus things I might be holding onto. In previous interactions I've provided an entire book in PDF form (about 300 pages) in order to receive a list of specific mentions in the book. In all these cases, I've received what seemed like reliable outputs from GPT that showed that the context was processed in full. But now you're mentioning tokenisation as being a limit. Were the previous generations hallucinations? If not, how was GPT able to process an "input" with so many tokens?
 
 # Output
 

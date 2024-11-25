@@ -1,6 +1,6 @@
 # Prompt
 
-Can you think of any tools which already exist and which are capable of allowing the user to engage in a conversation with an LLM or GPT - such as the tone that we are having. But they have the additional feature of allowing you to export the concluded chats to a storage environment of your choice. Ideally (for me) that would be a database. Do any tools do this?
+> Can you think of any tools which already exist and which are capable of allowing the user to engage in a conversation with an LLM or GPT - such as the tone that we are having. But they have the additional feature of allowing you to export the concluded chats to a storage environment of your choice. Ideally (for me) that would be a database. Do any tools do this?
 
 # Output
 

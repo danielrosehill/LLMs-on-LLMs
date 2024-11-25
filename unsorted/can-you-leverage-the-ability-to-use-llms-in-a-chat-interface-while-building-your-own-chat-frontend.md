@@ -1,6 +1,6 @@
 # Prompt
 
-A huge benefit of using LLMs is the ability to ask follow ups and get outputs that are based on the growing bank of context that forms within a chat. Is there any way to develop my own system for interfacing with LLMs that allows the user to have "chats" with an LLM via a frontend and then store those cohesively into a database (ie, the chat would be one entity and perhaps the outputs and prompts would be stored as associated/related entities in a database)
+> A huge benefit of using LLMs is the ability to ask follow ups and get outputs that are based on the growing bank of context that forms within a chat. Is there any way to develop my own system for interfacing with LLMs that allows the user to have "chats" with an LLM via a frontend and then store those cohesively into a database (ie, the chat would be one entity and perhaps the outputs and prompts would be stored as associated/related entities in a database)
 
 # Output
 

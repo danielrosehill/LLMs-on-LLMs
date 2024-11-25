@@ -1,6 +1,6 @@
 # Prompt
 
-Do any of the vector databases have frontend solutions for managing data stored in them that are really intuitive enough to be considered a "GUI" rather than just a "database manager". Even thought the distinction may seem a bit blurry, I'm looking for tools that would be easy enough for non-technical/business users to enter and manipulate data with.
+> Do any of the vector databases have frontend solutions for managing data stored in them that are really intuitive enough to be considered a "GUI" rather than just a "database manager". Even thought the distinction may seem a bit blurry, I'm looking for tools that would be easy enough for non-technical/business users to enter and manipulate data with.
 
 # Output
 

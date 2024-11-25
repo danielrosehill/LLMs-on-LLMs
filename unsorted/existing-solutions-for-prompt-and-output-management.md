@@ -1,6 +1,6 @@
 # Prompt
 
-As you know I'm looking for a system to streamline my LLM interactions and ensure that they are saved in a logical manner. Specifically I'd like my prompts and outputs to both be saved in a database and linked. I'm wondering if there are existing solutions which interface with LLMs by an API (or by any means) and which allow users to configure a storage destination database for both their prompt and the output of that prompt ... and to link the two together. Do any existing solutions do this?
+> As you know I'm looking for a system to streamline my LLM interactions and ensure that they are saved in a logical manner. Specifically I'd like my prompts and outputs to both be saved in a database and linked. I'm wondering if there are existing solutions which interface with LLMs by an API (or by any means) and which allow users to configure a storage destination database for both their prompt and the output of that prompt ... and to link the two together. Do any existing solutions do this?
 
 # Output
 

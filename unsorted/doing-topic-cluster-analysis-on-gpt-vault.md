@@ -1,6 +1,6 @@
 # Prompt
 
-You mentioned doing topic cluster analytic. How might I do that to possibly map the progression of my interests over time? I assume that would be possible given that the creation data is part of the recorded file metadata
+> You mentioned doing topic cluster analytics. How might I do that to possibly map the progression of my interests over time? I assume that would be possible given that the creation data is part of the recorded file metadata
 
 # Output
 

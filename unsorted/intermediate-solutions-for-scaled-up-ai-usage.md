@@ -1,6 +1,6 @@
 # Prompt
 
-If possible, I'd like to come back to what i asked previously about wishing to find a solution for using GPTs and LLMs at a greater level of scale. You suggested enterprise solutions but as a solo business owner I doubt I'd qualify as a sales candidate and even if I did I couldn't afford them. Perhaps there are some tools that sit somewhere between these offerings and the standard ChatGPT Pro sub (or that which exists for other LLMs)
+> If possible, I'd like to come back to what i asked previously about wishing to find a solution for using GPTs and LLMs at a greater level of scale. You suggested enterprise solutions but as a solo business owner I doubt I'd qualify as a sales candidate and even if I did I couldn't afford them. Perhaps there are some tools that sit somewhere between these offerings and the standard ChatGPT Pro sub (or that which exists for other LLMs)
 
 # Output
 

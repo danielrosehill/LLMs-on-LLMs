@@ -1,6 +1,6 @@
 # Prompt
 
-Let's think about a crazy add-on feature: users can use AR to visually "swim" through a representation of the knowledge they've stored in a UI that looks like outer space. The nodes in the database might look like planets or stars or something like that. Perhaps they can use gestures to "swim" through space and use another gesture to read a note. We might have ropes linking between thoughts that the user could pull on in their AR world. How might something like this be deployed with existing technology? Essentially we'd be trying to create something like an AR overlay on top of the graph database that the user builds using the app
+> Let's think about a crazy add-on feature: users can use AR to visually "swim" through a representation of the knowledge they've stored in a UI that looks like outer space. The nodes in the database might look like planets or stars or something like that. Perhaps they can use gestures to "swim" through space and use another gesture to read a note. We might have ropes linking between thoughts that the user could pull on in their AR world. How might something like this be deployed with existing technology? Essentially we'd be trying to create something like an AR overlay on top of the graph database that the user builds using the app
 
 # Output
 

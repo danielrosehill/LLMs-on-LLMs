@@ -1,6 +1,6 @@
 # Prompt
 
-are there any LLMs that provide free API keys with unlimited usage for open source projects so that I could bake the API key into the app and not have to ask users for it? But the usage charges would not be paid by me
+> Are there any LLMs that provide free API keys with unlimited usage for open source projects so that I could bake the API key into the app and not have to ask users for it? But the usage charges would not be paid by me
 
 # Output
 

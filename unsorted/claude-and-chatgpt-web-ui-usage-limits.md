@@ -1,6 +1,6 @@
 # Prompt
 
-LLMs commonly limit access to their web UIs and usually stratify the limit by access tier. In ChatGPT, paid users have a higher limit than free ones, but if they exceed a certain amount of usage their access is temporarily degraded by limiting access to less favorable models. What is this mechanism called: "rate limiting", "usage limits", or something else?
+> LLMs commonly limit access to their web UIs and usually stratify the limit by access tier. In ChatGPT, paid users have a higher limit than free ones, but if they exceed a certain amount of usage their access is temporarily degraded by limiting access to less favorable models. What is this mechanism called: "rate limiting", "usage limits", or something else?
 
 # Output
 

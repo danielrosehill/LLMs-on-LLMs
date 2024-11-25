@@ -1,6 +1,6 @@
 # Prompt
 
-I would like to use an LLM for the purpose of capturing my tasks and ideas as I think about them. I guess I would like something like a general purpose assistant. As you know I use fedora. This could be a desktop device but I think it makes more sense to use something cloud hosted. I might want to ask the LLM to do something like "write down this to do note" (or automatically determine that it were that). Or "set a calendar entry". Can you recommend any tools for the job? And if I wanted to keep costs down or avoid them entirely, is there a tool I could self host for this purpose ?
+> I would like to use an LLM for the purpose of capturing my tasks and ideas as I think about them. I guess I would like something like a general purpose assistant. As you know I use fedora. This could be a desktop device but I think it makes more sense to use something cloud hosted. I might want to ask the LLM to do something like "write down this to do note" (or automatically determine that it were that). Or "set a calendar entry". Can you recommend any tools for the job? And if I wanted to keep costs down or avoid them entirely, is there a tool I could self host for this purpose ?
 
 # Output
 

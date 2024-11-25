@@ -1,6 +1,6 @@
 # Prompt
 
-Let's say that I did indeed choose to create my own derivative model of an LLM. How difficult would that process be? What tools would I use on Fedora Linux to conduct the fine tuning? How long does that take? And how do you go about deploying your own LLM on your own infrastructure? I would have thought that the storage requirements would make this effectively impossible for your average consumer
+> Let's say that I did indeed choose to create my own derivative model of an LLM. How difficult would that process be? What tools would I use on Fedora Linux to conduct the fine tuning? How long does that take? And how do you go about deploying your own LLM on your own infrastructure? I would have thought that the storage requirements would make this effectively impossible for your average consumer
 
 # Output
 

@@ -1,7 +1,3 @@
-# Prompt
-
-# Output
-
 ## Overview of Large Language Model (LLM) Capabilities
 
 Large Language Models (LLMs) have a wide array of capabilities that make them versatile tools for numerous applications. Below is an alphabetical overview of these capabilities, each described with a brief explanation and example.

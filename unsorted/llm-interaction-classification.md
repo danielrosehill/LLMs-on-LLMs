@@ -1,6 +1,6 @@
 # Prompt
 
-Let's come up with a 20 part taxonomy for classifying typical LLM interactions. Let's divide them according to whether they come from the user or the LLM. Create 10 for each.
+> Let's come up with a 20 part taxonomy for classifying typical LLM interactions. Let's divide them according to whether they come from the user or the LLM. Create 10 for each.
 
 # Output
 

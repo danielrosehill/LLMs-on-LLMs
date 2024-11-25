@@ -1,10 +1,6 @@
 # Prompt
 
-A user accesses GPT 4o via its API.
-
-What is the rate-limit that will affect the volume of output the API can generate per limit?
-
-As this is expressed in tokens, approximately how many words does this work out to be?
+> A user accesses GPT 4o via its API. What is the rate-limit that will affect the volume of output the API can generate per limit? As this is expressed in tokens, approximately how many words does this work out to be?
 
 # Output
 

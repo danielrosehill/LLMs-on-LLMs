@@ -1,6 +1,6 @@
 # Prompt
 
-I've come across a few interesting tools which allow you to use multiple LLMs for conversational interactions: Typing Mind, Chat Playground, and Poe. I wasn't a huge fan of Perplexity. I'm a "power user" who runs a large volume of prompts daily. I would like to find whichever tool has the highest rate limits and the widest choice of models. Please list as many options as you're aware of
+I> 've come across a few interesting tools which allow you to use multiple LLMs for conversational interactions: Typing Mind, Chat Playground, and Poe. I wasn't a huge fan of Perplexity. I'm a "power user" who runs a large volume of prompts daily. I would like to find whichever tool has the highest rate limits and the widest choice of models. Please list as many options as you're aware of
 
 # Output
 

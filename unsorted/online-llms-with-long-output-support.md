@@ -1,6 +1,6 @@
 # Prompt
 
-Which cloud LLMs, available via API, support long outputs? For each, please provide a list of platforms it is available from and how the APIs can be used with local clients like Jan (and others)
+> Which cloud LLMs, available via API, support long outputs? For each, please provide a list of platforms it is available from and how the APIs can be used with local clients like Jan (and others)
 
 # Output
 

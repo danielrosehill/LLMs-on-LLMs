@@ -1,6 +1,6 @@
 # Prompt
 
-Can GPT 4o with web browsing be used programatically / by API
+> Can GPT 4o with web browsing be used programatically / by API
 
 # Output
 
