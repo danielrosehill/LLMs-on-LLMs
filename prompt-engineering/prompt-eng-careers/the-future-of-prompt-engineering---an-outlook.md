@@ -1,6 +1,6 @@
 # Prompt
 
-Please provide a detailed and optimistic forecast for the future of the prompt engineering profession - and AI specialists generally. Please think about who these professionals might work for. What their professional evolution might look like. What their day to day responsibility might be. What kind of salaries they might expect to earn. And what type of organisations they might be likely to work for. Also provide some thoughts about how the prompt engineering profession might coalesce and grow as the profession gains maturity. Please prepare a detailed output of at least 2,000 words.
+> Provide a detailed and optimistic forecast for the future of the prompt engineering profession - and AI specialists generally. Please think about who these professionals might work for. What their professional evolution might look like. What their day to day responsibility might be. What kind of salaries they might expect to earn. And what type of organisations they might be likely to work for. Also provide some thoughts about how the prompt engineering profession might coalesce and grow as the profession gains maturity. Please prepare a detailed output of at least 2,000 words.
 
 # Output
 

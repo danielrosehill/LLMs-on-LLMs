@@ -1,6 +1,6 @@
 # Prompt
 
-Let me take a step back. Let's say that I want to explore developing my own LLM apps generally. This assistant idea is a good case study but there might be many more ideas I have for LLM agents. Firstly, I'll want to leverage existing APIs rather than host my own LLMs. Are there any development frameworks intended for helping build this kind of project?
+> Let's say that I want to explore developing my own LLM apps generally. This assistant idea is a good case study but there might be many more ideas I have for LLM agents. Firstly, I'll want to leverage existing APIs rather than host my own LLMs. Are there any development frameworks intended for helping build this kind of project?
 
 # Output
 

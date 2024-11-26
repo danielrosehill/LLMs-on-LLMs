@@ -6,7 +6,7 @@ title: "Standardisation of natural language in prompting."
 
 # Prompt
 
-Have there been any attempts to develop formal standards for the natural language which humans use to prompt LLMs? Have there been any attempts to develop systematic standards for writing prompting expressions?
+> Have there been any attempts to develop formal standards for the natural language which humans use to prompt LLMs? Have there been any attempts to develop systematic standards for writing prompting expressions?
 
 # Output
 

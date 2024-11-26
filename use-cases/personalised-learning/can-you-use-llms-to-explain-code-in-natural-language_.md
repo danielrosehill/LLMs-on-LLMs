@@ -1,6 +1,6 @@
 # Prompt
 
-I commonly use LLMs to generate Python programs. While this is great for speeding up development, the pitfall is that you don't get the same hands-on learning experience as you do when you're coding yourself. Can the process be reverse-engineered? If I were to provide a Python program to an LLM, could it walk me through what it does step by step, converting from code to plain language?
+> I commonly use LLMs to generate Python programs. While this is great for speeding up development, the pitfall is that you don't get the same hands-on learning experience as you do when you're coding yourself. Can the process be reverse-engineered? If I were to provide a Python program to an LLM, could it walk me through what it does step by step, converting from code to plain language?
 
 # Output
 

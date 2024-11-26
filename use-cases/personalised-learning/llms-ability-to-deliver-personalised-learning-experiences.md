@@ -1,4 +1,8 @@
-what are some of the best ways to exploit the potential of LLMs for delivering personalised and highly effective learning experiences
+# Prompt
+
+> What are some of the best ways to exploit the potential of LLMs for delivering personalised and highly effective learning experiences
+
+# Output
 
 To exploit the potential of Large Language Models (LLMs) for delivering personalized and highly effective learning experiences, several strategies can be employed, leveraging their unique capabilities in natural language processing, adaptability, and scalability. Here are some of the best ways:
 

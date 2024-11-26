@@ -6,7 +6,7 @@ title: "Techniques declining in importance"
 
 # Prompt
 
-What are some examples of prompt engineering techniques that are becoming less important as LLMs become more capable and models mature?
+> What are some examples of prompt engineering techniques that are becoming less important as LLMs become more capable and models mature?
 
 # Output
 

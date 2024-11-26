@@ -1,6 +1,6 @@
 # Prompt
 
-Can LLMs be used for modelling geopolitical scenarios? Have any been fine tuned specifically for this use-case?
+> Can LLMs be used for modelling geopolitical scenarios? Have any been fine tuned specifically for this use-case?
 
 # Output
 

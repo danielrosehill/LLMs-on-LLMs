@@ -1,6 +1,6 @@
 # Prompt
 
-While that all makes sense, the idea of going with a database that's optimised for information discovery and AI appliations really appeals to me. Could a vector database be used for this purpose? Or any other database architectures that might provide a better springboard for the eventual shape of this project?
+> While that all makes sense, the idea of going with a database that's optimised for information discovery and AI appliations really appeals to me. Could a vector database be used for this purpose? Or any other database architectures that might provide a better springboard for the eventual shape of this project?
 
 # Output
 

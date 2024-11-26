@@ -4,7 +4,7 @@ title: "How are LLMs so typo tolerant?"
 
 # Prompt
 
-LLMs seem extremely tolerant of typos, more so than Google. Is this just my perception or is this accurate? And if so, how do they manage this?
+> LLMs seem extremely tolerant of typos, more so than Google. Is this just my perception or is this accurate? And if so, how do they manage this?
 
 # Output
 

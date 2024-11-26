@@ -1,6 +1,6 @@
 # Prompt
 
-Let's say that I wanted to learn Python. I might find conversing with an LLM to be a very natural way to do that. But I may wish to have the LLM follow specific directions about how to "teach." What would be the easiest way for me to build a tool for myself like this?
+> Let's say that I wanted to learn Python. I might find conversing with an LLM to be a very natural way to do that. But I may wish to have the LLM follow specific directions about how to "teach." What would be the easiest way for me to build a tool for myself like this?
 
 # Output
 

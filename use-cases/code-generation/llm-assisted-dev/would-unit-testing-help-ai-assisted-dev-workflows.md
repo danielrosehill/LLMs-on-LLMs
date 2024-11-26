@@ -1,6 +1,6 @@
 # Prompt
 
-I'm using AI tools to develop Python GUIs. Currently there's a lot of trial and error involved in the process. Frequently AI tools will try to improve one feature but break another. I've heard about unit testing and unit tests but don't really understand what they mean. Could you break them down? And shed some light on how they might help my development workflow?
+> I'm using AI tools to develop Python GUIs. Currently there's a lot of trial and error involved in the process. Frequently AI tools will try to improve one feature but break another. I've heard about unit testing and unit tests but don't really understand what they mean. Could you break them down? And shed some light on how they might help my development workflow?
 
 # Output
 

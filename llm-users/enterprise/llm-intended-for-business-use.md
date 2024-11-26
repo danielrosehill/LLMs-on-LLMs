@@ -1,6 +1,6 @@
 # Prompt
 
-can you recommend an LLM with a conversational interface like Perplexity or ChatGPT but which has higher usage limits and is intended more for business use? I'm not looking for an enterprise tier on these solutions. But rather I'd like a tool that is more intended for intensive use
+> Can you recommend an LLM with a conversational interface like Perplexity or ChatGPT but which has higher usage limits and is intended more for business use? I'm not looking for an enterprise tier on these solutions. But rather I'd like a tool that is more intended for intensive use
 
 # Output
 

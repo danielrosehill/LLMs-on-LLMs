@@ -1,6 +1,6 @@
 # Prompt
 
-Let's talk about major conferences that have a strong focus on LLMs. Can you give me a list of the major ones that are out there currently? Give me both a top list and a list of conferences in Europe
+> Let's talk about major conferences that have a strong focus on LLMs. Can you give me a list of the major ones that are out there currently? Give me both a top list and a list of conferences in Europe
 
 # Output
 

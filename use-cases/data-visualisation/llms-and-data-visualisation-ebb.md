@@ -1,9 +1,3 @@
-# Prompt
-
-Please now generate one about data visualisation
-
-# Output
-
 ## Overview of Large Language Model (LLM) Capabilities in Data Visualization
 
 Large Language Models (LLMs) have significantly enhanced data visualization by automating and simplifying the process of creating insightful visual representations from complex datasets. Below is an overview of their capabilities in this domain, each described with a brief explanation and example.

@@ -4,13 +4,7 @@ title: "Suggest argument-based prompting strategies"
 
 # Prompt
 
-Here are some prompting snippets that I frequently use to generate arguments for or against theses to explore them more fully:
-
-- Support this statement: {statement}
-- Disagree with this statement: {statement}
-- Provide arguments for and against this statmeent: {statement}
-
-Suggest others that could be employed to investigate the potential responses to an argument
+> Here are some prompting snippets that I frequently use to generate arguments for or against theses to explore them more fully:- Support this statement: {statement} - Disagree with this statement: {statement} - Provide arguments for and against this statmeent: {statement} Suggest others that could be employed to investigate the potential responses to an argument
 
 # Output
 

@@ -1,6 +1,6 @@
 # Prompt
 
-I'm working on a knowledge base built around LLM outputs. Some think that the idea of saving /retaining LLM outputs is "stupid." I strenuously disagree. But I'd love to hear your reasons as to why retaining LLM outputs can be highly useful in developing personal or institutional knowledge
+> I'm working on a knowledge base built around LLM outputs. Some think that the idea of saving /retaining LLM outputs is "stupid." I strenuously disagree. But I'd love to hear your reasons as to why retaining LLM outputs can be highly useful in developing personal or institutional knowledge
 
 # Output
 

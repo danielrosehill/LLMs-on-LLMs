@@ -1,6 +1,6 @@
 # Prompt
 
-Could you explain the differences between Lang Chain and Llama Index? What do they do differently? What makes one more suitable than the other for my project?
+> Could you explain the differences between Lang Chain and Llama Index? What do they do differently? What makes one more suitable than the other for my project?
 
 # Output
 

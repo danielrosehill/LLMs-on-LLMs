@@ -1,6 +1,6 @@
 # Prompt
 
-Great. Could you give me some prompting tips on how to prompt GPTs and LLMs when asking them to parse a long document that is likely to exceed the token limit? Some strategies that can be used to get the model to chunk the input and generate based on that?
+> Could you give me some prompting tips on how to prompt GPTs and LLMs when asking them to parse a long document that is likely to exceed the token limit? Some strategies that can be used to get the model to chunk the input and generate based on that?
 
 # Output
 

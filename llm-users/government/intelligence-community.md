@@ -4,7 +4,7 @@ title: "LLM Use-Cases For: The Intelligence Community"
 
 # Prompt
 
-How might intelligence agencies and national security organisations use LLMs?
+> How might intelligence agencies and national security organisations use LLMs?
 
 # Output
 

@@ -1,17 +1,6 @@
 # Prompt
 
-ChatGPT Plus is currently priced at $20 per month.
-
-I'd be interested to compare the cost-effectiveness of the web UI and using GPT 4o via the API.
-
-Specifically - how many outputs one can generate for $20 (at which point, the API will become more expensive, of course).
-
-Given that the API usage is priced based upon input and output tokens used, use the following assumptions:
-
-- Average input token usage = 90
-- Average output token usage = 1100
-
-Calculate how many outputs could be generated per day at the point at which the API costs and subscription costs would reach equivalence
+> ChatGPT Plus is currently priced at $20 per month. I'd be interested to compare the cost-effectiveness of the web UI and using GPT 4o via the API. Specifically - how many outputs one can generate for $20 (at which point, the API will become more expensive, of course). Given that the API usage is priced based upon input and output tokens used, use the following assumptions: - Average input token usage = 90  Average output token usage = 1100 Calculate how many outputs could be generated per day at the point at which the API costs and subscription costs would reach equivalence
 
 # Output
 

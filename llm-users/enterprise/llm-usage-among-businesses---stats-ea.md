@@ -1,6 +1,6 @@
 # Prompt
 
-I'd be interested in picking up on your last point about LLM usage among businesses being a growing trend. Is there any data on when businesses began using LLMs? When did they begin picking up mainstream traction among consumers? And is there any specific data on growth volumes?
+> I'd be interested in picking up on your last point about LLM usage among businesses being a growing trend. Is there any data on when businesses began using LLMs? When did they begin picking up mainstream traction among consumers? And is there any specific data on growth volumes?
 
 # Output
 

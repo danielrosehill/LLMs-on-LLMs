@@ -6,7 +6,7 @@ title: "Is training data always open source?"
 
 # Prompt
 
-Is the training data that LLMs are trained on open source or do vendors have to buy it? Do both kinds exist?
+> Is the training data that LLMs are trained on open source or do vendors have to buy it? Do both kinds exist?
 
 # Output
 

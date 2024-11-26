@@ -6,7 +6,7 @@ title: "Closed-sourced datasets used in LLM training"
 
 # Prompt
 
-What are some examples of proprietary / closed-source training datasets that are commonly used to train LLMs?
+> What are some examples of proprietary / closed-source training datasets that are commonly used to train LLMs?
 
 # Output
 

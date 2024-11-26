@@ -6,13 +6,7 @@ title: "The text introducing and summarising outputs"
 
 # Prompt
 
-LLMs commonly prepend and finish the core text in their output with buffer remarks.
-
-Here's what I mean by one:
-
-"These additional questions further explore technical aspects, practical applications, ethical concerns, and future possibilities related to large language models (LLMs)."
-
-Do these aspects of inference have a name?
+> LLMs commonly prepend and finish the core text in their output with buffer remarks. Here's what I mean by one: "These additional questions further explore technical aspects, practical applications, ethical concerns, and future possibilities related to large language models (LLMs)."Do these aspects of inference have a name?
 
 # Output
 

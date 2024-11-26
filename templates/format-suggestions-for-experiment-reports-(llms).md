@@ -1,6 +1,6 @@
 # Prompt
 
-I'm writing up the results of prompting experiments on Github. these involve assessing the capabilities of LLms for various use-cases. Please suggest a format for the actual reports specifying which headings to use and what content to include in each section
+> I'm writing up the results of prompting experiments on Github. these involve assessing the capabilities of LLms for various use-cases. Please suggest a format for the actual reports specifying which headings to use and what content to include in each section
 
 # Output
 

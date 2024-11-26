@@ -1,6 +1,6 @@
 # Prompt
 
-Prompt engineering is an emerging new field. A lot of prompting can be done in natural language. But this may not prove the best solution for those who require this kind of work at scale. Can prompts be written in programming languages? And if so which ones?
+> Prompt engineering is an emerging new field. A lot of prompting can be done in natural language. But this may not prove the best solution for those who require this kind of work at scale. Can prompts be written in programming languages? And if so which ones?
 
 # Output
 

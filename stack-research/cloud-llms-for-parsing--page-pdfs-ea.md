@@ -1,6 +1,6 @@
 # Prompt
 
-Let's go back to my example of a 100 page PDF. This is towards the upper length of a corporate sustainability report, but it's not totally atypical. It would be useful to mine documents like this for insights - particularly to extract facts and figures. However, I would need an LLM that could not only pull those out, but also specify which page they appeared on, so that I could verify that the info was correct. Can you suggest cloud LLMs that would be suitable for this task and what approximate costs for running workloads like this might be?
+> Let's go back to my example of a 100 page PDF. This is towards the upper length of a corporate sustainability report, but it's not totally atypical. It would be useful to mine documents like this for insights - particularly to extract facts and figures. However, I would need an LLM that could not only pull those out, but also specify which page they appeared on, so that I could verify that the info was correct. Can you suggest cloud LLMs that would be suitable for this task and what approximate costs for running workloads like this might be?
 
 # Output
 

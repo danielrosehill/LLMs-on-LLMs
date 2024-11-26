@@ -2,15 +2,7 @@
 
 ## Prompt
 
-Let's say that I download a local LLM and ask it something like:
-
-*"What color is the sky?"*
-
-It will tell me something like:
-
-*"The sky is blue"*
-
-Where is this information actually "coming" from?
+> Let's say that I download a local LLM and ask it something like: *"What color is the sky?"* It will tell me something like: *"The sky is blue"* Where is this information actually "coming" from?
 
 ## Generation Details
 

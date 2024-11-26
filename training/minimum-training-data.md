@@ -4,7 +4,7 @@ title: "Is there a minimum training data?"
 
 # Prompt
 
-Is there a minimum viable size for llm training data - beneath which the volume of data is simply incapable of training effective models?
+> Is there a minimum viable size for llm training data - beneath which the volume of data is simply incapable of training effective models?
 
 # Output
 

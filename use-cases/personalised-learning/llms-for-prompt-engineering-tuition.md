@@ -1,6 +1,6 @@
 # Prompt
 
-Are there any LLMs which are specifically trained on coaching users on prompt engineering strategies?
+> Are there any LLMs which are specifically trained on coaching users on prompt engineering strategies?
 
 # Output
 

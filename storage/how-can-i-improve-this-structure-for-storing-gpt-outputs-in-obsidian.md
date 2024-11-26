@@ -1,6 +1,6 @@
 # Prompt
 
-Here's an example of how I'm currently capturing conversations with LLMs in Obsidian. What do you think about the structure. How do you think it could be improved? And based on this approach, how do you recommend I configure the automation I'd like whereby just the prompts are copied into the Prompts folder?
+> Here's an example of how I'm currently capturing conversations with LLMs in Obsidian. What do you think about the structure. How do you think it could be improved? And based on this approach, how do you recommend I configure the automation I'd like whereby just the prompts are copied into the Prompts folder?
 
 # Output
 

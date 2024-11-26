@@ -1,6 +1,6 @@
 # Prompt
 
-You mentioned  Lang Chain in that response. I'd be curious to know about other frameworks and programs that you think it would be worthwhile for the prompt engineers of tomorrow to familiarise themselves with
+> You mentioned  Lang Chain in that response. I'd be curious to know about other frameworks and programs that you think it would be worthwhile for the prompt engineers of tomorrow to familiarise themselves with
 
 # Output
 

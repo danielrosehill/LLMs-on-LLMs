@@ -1,6 +1,6 @@
 # Prompt
 
-I see that there are quite a huge number of Llama 70B models but I've heard that one specific variant is useful for Python generation. I see variants like Instruct GGUF and Q4-K-M. What is the difference between all these subtypes? I was under the impression that there was just one model by this name
+> I see that there are quite a huge number of Llama 70B models but I've heard that one specific variant is useful for Python generation. I see variants like Instruct GGUF and Q4-K-M. What is the difference between all these subtypes? I was under the impression that there was just one model by this name
 
 # Output
 

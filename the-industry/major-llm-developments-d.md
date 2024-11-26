@@ -1,6 +1,6 @@
 # Prompt
 
-Great. Please provide a chronological outline of the development of major LLMs. For each LLM, explain why it was an improvement on preceding versions
+> Provide a chronological outline of the development of major LLMs. For each LLM, explain why it was an improvement on preceding versions
 
 # Output
 

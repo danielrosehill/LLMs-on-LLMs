@@ -6,7 +6,7 @@ title: "Selective LLM training data
 
 # Prompt
 
-LLMs are typically described as having been trained on "vast" amounts of data. Have there been efforts to be more selective about what kind of data is included in the training?
+> LLMs are typically described as having been trained on "vast" amounts of data. Have there been efforts to be more selective about what kind of data is included in the training?
 
 # Output
 

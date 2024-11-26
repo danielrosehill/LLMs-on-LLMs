@@ -6,9 +6,7 @@ title: "Can LLMs run out of ideas?"
 
 # Prompt
 
-When an LLM generates an output, you can write 'more' to ask it to continue iterating through suggestions. 
-
-Can it eventually run out of additional ideas?
+> When an LLM generates an output, you can write 'more' to ask it to continue iterating through suggestions. Can it eventually run out of additional ideas?
 
 # Output
 

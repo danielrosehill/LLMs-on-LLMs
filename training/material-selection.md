@@ -6,7 +6,7 @@ title: "Training material selection and user experience"
 
 # Prompt
 
-How does the choice of training material influence the ultimate user experience engaging with an LLM?
+> How does the choice of training material influence the ultimate user experience engaging with an LLM?
 
 # Output
 

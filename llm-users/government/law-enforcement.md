@@ -4,7 +4,7 @@ title: "LLM Use-Cases For Law Enforcement"
 
 # Prompt
 
-How might national and local law enforcement agencies use LLMs?
+> How might national and local law enforcement agencies use LLMs?
 
 # Output
 

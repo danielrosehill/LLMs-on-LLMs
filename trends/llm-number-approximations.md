@@ -1,6 +1,6 @@
 # Prompt
 
-Have there been any approximations as to how many LLMs have been conducted to date? Also: what is the average development cost of an LLM? I always assumed that it was so cost prohibitive that only major tech corporations could afford to develop one. Is that the case? Or is it possible for an "agile" small team to build their own model?
+> Have there been any approximations as to how many LLMs have been conducted to date? Also: what is the average development cost of an LLM? I always assumed that it was so cost prohibitive that only major tech corporations could afford to develop one. Is that the case? Or is it possible for an "agile" small team to build their own model?
 
 # Output
 

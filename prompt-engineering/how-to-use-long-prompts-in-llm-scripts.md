@@ -1,6 +1,6 @@
 # Prompt
 
-When I'm working with a long prompt line this, does it make more sense to save the prompt to a file and then reference that in the script or include the prompt text in the script?
+> When I'm working with a long prompt line this, does it make more sense to save the prompt to a file and then reference that in the script or include the prompt text in the script?
 
 # Output
 

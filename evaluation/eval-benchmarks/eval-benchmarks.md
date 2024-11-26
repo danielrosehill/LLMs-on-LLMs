@@ -4,7 +4,7 @@ title: "Benchmarks for comparing the accuracy of different models"
 
 # Prompt
 
-What evaluation benchmarks and frameworks exist for objectively comparing the accuracy of two LLMs?
+> What evaluation benchmarks and frameworks exist for objectively comparing the accuracy of two LLMs?
 
 # Output
 

@@ -1,10 +1,6 @@
 # Prompt
 
-I would like to build a repository of prompts.
-The purpose of this repository of prompts would be specifically to evaluate LLMs for specific tasks that are of interest to me.
-Can you suggest what I might call this repository?
-Help me think of the variety of prompts that I may wish to include
-How can I record the prompts in a way that notes a little bit of metadata like the date I wrote the prompt? What else might I wish to note for the prompts?
+> I would like to build a repository of prompts. The purpose of this repository of prompts would be specifically to evaluate LLMs for specific tasks that are of interest to me. Can you suggest what I might call this repository? Help me think of the variety of prompts that I may wish to include How can I record the prompts in a way that notes a little bit of metadata like the date I wrote the prompt? What else might I wish to note for the prompts?
 
 # Output
 

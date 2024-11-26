@@ -1,6 +1,6 @@
 # Prompt
 
-I feel like the best way to execute on this use case has to be something like an LLM that is trained on this keyword array but which is intelligent enough to think a bit beyond it. Can you think of any LLM that could be used for this purpose? Are there any taht have been developed with live news monitoring in mind?
+The best way to execute on this use case has to be something like an LLM that is trained on this keyword array but which is intelligent enough to think a bit beyond it. Can you think of any LLM that could be used for this purpose? Are there any that have been developed with live news monitoring in mind?
 
 # Output
 

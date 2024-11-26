@@ -1,6 +1,6 @@
 # Prompt
 
-Can you give me some examples of industries and job functions that are making particularly intensive use of LLM capabilities?
+> Can you give me some examples of industries and job functions that are making particularly intensive use of LLM capabilities?
 
 # Output
 

@@ -1,6 +1,6 @@
 # Prompt
 
-Let's roll back a bit. I'm trying to use a local LLM to do some text classification on a folder in my local computer. I'd like the LLM to iterate over the files in the folder and either identify which of those are tech tutorials or move the files into a subfolder. What's the easiest way to make this work?
+> I'm trying to use a local LLM to do some text classification on a folder in my local computer. I'd like the LLM to iterate over the files in the folder and either identify which of those are tech tutorials or move the files into a subfolder. What's the easiest way to make this work?
 
 # Output
 

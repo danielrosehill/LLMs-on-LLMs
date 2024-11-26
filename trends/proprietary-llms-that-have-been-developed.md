@@ -1,6 +1,6 @@
 # Prompt
 
-Can you give me some examples of totally proprietary LLMs that have been developed? Perhaps these are only available within government communities or only for use within a certain business? In any event, I'd be interested in getting a feel for the type of organisation that has made the substantial investment in creating their own LLM and why
+> Can you give me some examples of totally proprietary LLMs that have been developed? Perhaps these are only available within government communities or only for use within a certain business? In any event, I'd be interested in getting a feel for the type of organisation that has made the substantial investment in creating their own LLM and why
 
 # Output
 

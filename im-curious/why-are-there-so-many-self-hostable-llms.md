@@ -1,6 +1,4 @@
-why are so many LLMs only released as self hostable tools
-
-The trend toward self-hosted LLMs is driven by several key factors:
+ 
 
 ## Privacy and Data Control
 

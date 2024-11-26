@@ -1,6 +1,6 @@
 # Prompt
 
-I would be interested in exploring how businesses are currently using LLMs. Firstly, I'd love to know what kind of businesses are deriving a lot of value from them. Are there any models that are particularly popular among business users as opposed to consumers?
+> I would be interested in exploring how businesses are currently using LLMs. Firstly, I'd love to know what kind of businesses are deriving a lot of value from them. Are there any models that are particularly popular among business users as opposed to consumers?
 
 # Output
 

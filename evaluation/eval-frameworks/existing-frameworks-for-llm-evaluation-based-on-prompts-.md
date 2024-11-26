@@ -1,6 +1,6 @@
 # Prompt
 
-I am building a library of prompts to use for evaluating LLMs so that I can identify which will be the most helpful for the specific use-cases I'm targeting. To begin, I'm developing a repository of evaluation prompts: prompts specifically written to compare the capabilities of different LLMs. I would be interested in knowing about the existing frameworks that I can use for this purpose: both SaaS tools built for this and frameworks that I can self-host. I am aiming to streamline the process of selecting the perfect model for a specific recurrent job.
+> I am building a library of prompts to use for evaluating LLMs so that I can identify which will be the most helpful for the specific use-cases I'm targeting. To begin, I'm developing a repository of evaluation prompts: prompts specifically written to compare the capabilities of different LLMs. I would be interested in knowing about the existing frameworks that I can use for this purpose: both SaaS tools built for this and frameworks that I can self-host. I am aiming to streamline the process of selecting the perfect model for a specific recurrent job.
 
 # Output
 

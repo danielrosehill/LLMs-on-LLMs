@@ -1,6 +1,6 @@
 # Prompt
 
-OK. Now let's talk about how businesses are using LLMs at scale. Using tools like ChatGPT doesn't seem like the way to go because of very stringent rate limiting and the inability of the interface to index chats in a very robust manner. So what tools and interfaces are businesses turning to to leverage these tools?
+> Let's talk about how businesses are using LLMs at scale. Using tools like ChatGPT doesn't seem like the way to go because of very stringent rate limiting and the inability of the interface to index chats in a very robust manner. So what tools and interfaces are businesses turning to to leverage these tools?
 
 # Output
 

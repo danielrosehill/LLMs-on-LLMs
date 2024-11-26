@@ -6,7 +6,7 @@ title: "Batch prompting frameworks"
 
 # Prompt
 
-Are there any prompting frameworks or tools that support batch prompting in which a variable is inserted into a prompt skeleton, sent to an LLM, and then the responses are gathered and recorded?
+> Are there any prompting frameworks or tools that support batch prompting in which a variable is inserted into a prompt skeleton, sent to an LLM, and then the responses are gathered and recorded?
 
 # Output
 

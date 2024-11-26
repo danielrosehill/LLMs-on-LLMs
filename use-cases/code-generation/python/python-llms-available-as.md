@@ -1,6 +1,6 @@
 # Prompt
 
-please create a list of LLMs specialised in python generation and debugging and which can be accessed via an API. For every LLM that you list, please state where it can be used from. Include multiple marketplaces. Only include specialist code generation LLMs
+> Generate a list of LLMs specialised in python generation and debugging and which can be accessed via an API. For every LLM that you list, please state where it can be used from. Include multiple marketplaces. Only include specialist code generation LLMs
 
 # Output
 

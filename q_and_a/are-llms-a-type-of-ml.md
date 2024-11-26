@@ -1,6 +1,6 @@
 # Prompt
 
-Explain the difference please between LLMs and ML. Are LLMs a machine learning technology or AI or both?
+> xplain the difference please between LLMs and ML. Are LLMs a machine learning technology or AI or both?
 
 # Output
 

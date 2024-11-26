@@ -1,6 +1,6 @@
 # Prompt
 
-Are there any LLM tools which have been designed primarily (or from the outset) for voice interaction? I'm looking for an LLM that supports seamless voice integration so that I can prompt with speech to text recognition
+> Are there any LLM tools which have been designed primarily (or from the outset) for voice interaction? I'm looking for an LLM that supports seamless voice integration so that I can prompt with speech to text recognition
 
 # Output
 

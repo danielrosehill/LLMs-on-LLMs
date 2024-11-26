@@ -1,6 +1,6 @@
 # Prompt
 
-Can you recommend some databases that might be helpful in attempting to find a list of companies / startups involved in AI & LLM? Ideally I would need something with fresh information and raise activity to help me keep on top of emerging companies. However, I don't have a large budget (this would be used for job-hunting purposes). Say $50/month max. Anything you can recommend and ideas for how I could perhaps use AI to identify interesting companies.
+> Can you recommend some databases that might be helpful in attempting to find a list of companies / startups involved in AI & LLM? Ideally I would need something with fresh information and raise activity to help me keep on top of emerging companies. However, I don't have a large budget (this would be used for job-hunting purposes). Say $50/month max. Anything you can recommend and ideas for how I could perhaps use AI to identify interesting companies.
 
 # Output
 

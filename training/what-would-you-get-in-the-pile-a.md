@@ -1,6 +1,6 @@
 # Prompt
 
-You missed one question. Let's narrow our focus to "The Pile" (I've been on their site). If I recall, it's an open source crawl. As I mentioned, it's feasible for a random internet user to download it. If I did that, what exactly would I get? Is it a random repository of blogs and websites? Internet fora? I'm curious!
+> Let's narrow our focus to "The Pile" (I've been on their site). If I recall, it's an open source crawl. As I mentioned, it's feasible for a random internet user to download it. If I did that, what exactly would I get? Is it a random repository of blogs and websites? Internet fora? I'm curious!
 
 # Output
 

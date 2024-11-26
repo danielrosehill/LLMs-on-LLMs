@@ -1,6 +1,6 @@
 # Prompt
 
-I'm trying to create the ultimate prompt for finding the best note taking and knowledge base solution for my needs. Your job is to interview me to understand my requirements and then provide the most detailed prompt possible
+> I'm trying to create the ultimate prompt for finding the best note taking and knowledge base solution for my needs. Your job is to interview me to understand my requirements and then provide the most detailed prompt possible
 
 # Question 1
 

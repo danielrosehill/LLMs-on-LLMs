@@ -1,6 +1,6 @@
 # Prompt
 
-Please provide a document called "The Forgotten LLMs". Your objective here is to list LLMs that haven't captured fame as much as some of the others, but which are still interesting
+> Please provide a document called "The Forgotten LLMs". Your objective here is to list LLMs that haven't captured fame as much as some of the others, but which are still interesting
 
 # Output
 

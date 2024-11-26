@@ -1,6 +1,6 @@
 # Prompt
 
-I've never really understood why textual AI applications like LLMs require intensive GPU resources specifically. My primitive understanding is that GPUs are useful for graphic applications (video etc). What is it about LLM workloads that makes them particularly require this hardware rather than (say) what I would have assumed which is that they require intensive computing resources / high end CPUs?
+> I've never really understood why textual AI applications like LLMs require intensive GPU resources specifically. My primitive understanding is that GPUs are useful for graphic applications (video etc). What is it about LLM workloads that makes them particularly require this hardware rather than (say) what I would have assumed which is that they require intensive computing resources / high end CPUs?
 
 # Output
 

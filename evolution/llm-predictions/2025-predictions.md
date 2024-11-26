@@ -8,7 +8,7 @@ Model: GPT-4o
 
 # Prompt
 
-Predict 10 developments you expect we will see in the LLM space in 2025
+> Predict 10 developments you expect we will see in the LLM space in 2025
 
 # Output
 

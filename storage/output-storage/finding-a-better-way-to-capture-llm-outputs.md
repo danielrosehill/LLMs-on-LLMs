@@ -1,6 +1,6 @@
 # Prompt
 
-I'm currently building a system for capturing LLM outputs and organising them in a sort of knowledge base. At the moment, I'm capturing them into Obsidian by copying and pasting. While I have developed some hotkeys for speeding up the process, it's quite inefficient. I've thought about using LLMs via their APIs, but this is expensive and (more problematically) it makes it much harder to engage in continuous conversations with LLMs. I'm wondering if you can think of any ways that I can achieve my goal of capturing my conversations with LLMs without having to do so much manual data entry
+> I'm currently building a system for capturing LLM outputs and organising them in a sort of knowledge base. At the moment, I'm capturing them into Obsidian by copying and pasting. While I have developed some hotkeys for speeding up the process, it's quite inefficient. I've thought about using LLMs via their APIs, but this is expensive and (more problematically) it makes it much harder to engage in continuous conversations with LLMs. I'm wondering if you can think of any ways that I can achieve my goal of capturing my conversations with LLMs without having to do so much manual data entry
 
 # Output
 
